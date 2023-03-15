@@ -103,52 +103,6 @@ HomePageScreen As screen:
         Y: =30
         ZIndex: =6
 
-    HtmlText3_2 As htmlViewer:
-        Height: =280
-        HtmlText: |-
-            ="<div style='background-color: rgba(1,0,100); 
-            box-shadow: 1px 2px 1px 0px rgba(89,87,87,0.85); 
-            margin: 10px; 
-            width: 250px; 
-            height: 230px; 
-            border-radius: 30px'>
-            <div style = color:white;text-align:justify;padding-left:35px;padding-top:40px><h2>Onboard Client</h2></div>
-            </div>"
-        Width: =272
-        X: =963
-        Y: =164
-        ZIndex: =10
-
-    Button3_1 As button:
-        BorderStyle: =BorderStyle.None
-        Color: =RGBA(255, 255, 255, 1)
-        Fill: =RGBA(9, 33, 98, 1)
-        Height: =27
-        OnSelect: =Navigate(RPACustomerScreen,ScreenTransition.Fade)
-        PressedBorderColor: =RGBA(9, 33, 98, 1)
-        PressedColor: =RGBA(9, 33, 98, 1)
-        PressedFill: =RGBA(9, 33, 98, 1)
-        Text: ="View"
-        Width: =114
-        X: =583
-        Y: =341
-        ZIndex: =11
-
-    Button3_2 As button:
-        BorderStyle: =BorderStyle.None
-        Color: =RGBA(255, 255, 255, 1)
-        Fill: =RGBA(9, 33, 98, 1)
-        Height: =28
-        OnSelect: =Navigate(OnboardClientScreen,ScreenTransition.Fade)
-        PressedBorderColor: =RGBA(9, 33, 98, 1)
-        PressedColor: =RGBA(9, 33, 98, 1)
-        PressedFill: =RGBA(9, 33, 98, 1)
-        Text: ="View"
-        Width: =96
-        X: =1064
-        Y: =340
-        ZIndex: =12
-
     Image2 As image:
         BorderStyle: =BorderStyle.None
         DisplayMode: =DisplayMode.View
