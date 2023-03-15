@@ -1,0 +1,248 @@
+UploadInvoiceFile As screen:
+    Fill: =RGBA(237,242,246,1)
+    Height: =Max(App.Height, App.DesignHeight)
+    Width: =Max(App.Width, App.DesignWidth)
+
+    Rectangle1_26 As rectangle:
+        BorderColor: =RGBA(234,235,236,1)
+        BorderThickness: =1
+        DisabledFill: =Rectangle1_26.Fill
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =680
+        HoverFill: =Rectangle1_26.Fill
+        OnSelect: =
+        PressedFill: =Rectangle1_26.Fill
+        TabIndex: =0
+        Width: =907
+        X: =440
+        Y: =74
+        ZIndex: =1
+
+    Rectangle1_24 As rectangle:
+        DisabledFill: =Rectangle1_24.Fill
+        Fill: =RGBA(0, 25, 83, 1)
+        Height: =60
+        HoverFill: =Rectangle1_24.Fill
+        PressedFill: =Rectangle1_24.Fill
+        TabIndex: =0
+        Width: =1366
+        ZIndex: =2
+
+    TextBox4_47 As label:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Color: =RGBA(0,25,83,.8)
+        Font: =Font.'Lato Black'
+        Height: =24
+        HoverBorderColor: =TextBox4_47.BorderColor
+        HoverColor: =TextBox4_47.Color
+        HoverFill: =TextBox4_47.Fill
+        PressedBorderColor: =TextBox4_47.BorderColor
+        PressedColor: =TextBox4_47.Color
+        PressedFill: =TextBox4_47.Fill
+        Size: =10
+        Text: ="Invoice Upload Details"
+        Width: =360.6756756756757
+        X: =29
+        Y: =90
+        ZIndex: =3
+
+    HtmlText2_6 As htmlViewer:
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.'Lato Black'
+        Height: =29
+        HoverBorderColor: =HtmlText2_6.BorderColor
+        HtmlText: |-
+            =GalleryCustomer.Selected.ClientName & "&nbsp;&nbsp;|&nbsp;&nbsp;<span style=font-size:15px>" & "Invoice Upload"
+        PaddingBottom: =0
+        PaddingLeft: =0
+        PaddingRight: =0
+        PaddingTop: =0
+        PressedBorderColor: =HtmlText2_6.BorderColor
+        Size: =15
+        Width: =617
+        X: =53
+        Y: =18.617977528089888
+        ZIndex: =4
+
+    TextBox3_19 As label:
+        Align: =TextPosition.Right
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.Lato
+        Height: =21
+        HoverBorderColor: =TextBox3_19.BorderColor
+        HoverColor: =TextBox3_19.Color
+        HoverFill: =TextBox3_19.Fill
+        PressedBorderColor: =TextBox3_19.BorderColor
+        PressedColor: =TextBox3_19.Color
+        PressedFill: =TextBox3_19.Fill
+        Size: =9
+        Text: =User().FullName
+        Width: =256
+        X: =1091.6666666666665
+        Y: =20
+        ZIndex: =5
+
+    TextBox4_46 As label:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Color: =RGBA(0,25,83,.8)
+        Font: =Font.'Lato Black'
+        Height: =24
+        HoverBorderColor: =TextBox4_46.BorderColor
+        HoverColor: =TextBox4_46.Color
+        HoverFill: =TextBox4_46.Fill
+        PressedBorderColor: =TextBox4_46.BorderColor
+        PressedColor: =TextBox4_46.Color
+        PressedFill: =TextBox4_46.Fill
+        Size: =10
+        Text: ="Invoice Upload Summary"
+        Width: =360.6756756756757
+        X: =440
+        Y: =87
+        ZIndex: =6
+
+    Label1_1 As label:
+        FontWeight: =FontWeight.Lighter
+        Size: =12
+        Text: ="Upload invoice file"
+        X: =65
+        Y: =111
+        ZIndex: =9
+
+    Icon2_1 As icon.Attachment:
+        Height: =23
+        Icon: =Icon.PaperClip
+        Width: =28
+        X: =45
+        Y: =117
+        ZIndex: =10
+
+    AddMediaWithImage1 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =11
+
+        UploadedImage1 As image:
+            Height: =567
+            Image: =If(IsBlank(AddMediaButton1.Media), SampleImage, AddMediaButton1.Media)
+            ImagePosition: =ImagePosition.Fill
+            Width: =412
+            X: =9
+            Y: =AddMediaButton1.Y
+            ZIndex: =12
+
+        AddMediaButton1 As addMedia:
+            Height: =567
+            OnSelect: |-
+                =Set(FlowResults, InvoiceProcessingFlow.Run(AddMediaButton1.Media));
+                
+                Set(ClientName, FlowResults.client_name);
+                Set(InvoiceId, FlowResults.invoice_id);
+                Set(InvoiceDate,FlowResults.invoice_date);
+                Set(DueDate, FlowResults.due_date);
+                Set(InvoiceTotal, FlowResults.invoice_total_amount);
+            Size: =25
+            Width: =412
+            X: =9
+            Y: =167
+            ZIndex: =13
+
+    Label2 As label:
+        Text: ="Debtor Name"
+        X: =440
+        Y: =167
+        ZIndex: =14
+
+    Label2_1 As label:
+        Text: ="Invoice No"
+        X: =440
+        Y: =246
+        ZIndex: =15
+
+    Label2_2 As label:
+        Text: ="Invoice Amount"
+        X: =440
+        Y: =495
+        ZIndex: =16
+
+    Label2_3 As label:
+        Text: ="Invoice Date"
+        X: =440
+        Y: =329
+        ZIndex: =17
+
+    Label2_4 As label:
+        Text: ="Due Date"
+        X: =440
+        Y: =413
+        ZIndex: =18
+
+    TextInput1 As text:
+        Default: =ClientName
+        X: =656
+        Y: =167
+        ZIndex: =19
+
+    TextInput1_1 As text:
+        Default: =InvoiceId
+        X: =656
+        Y: =246
+        ZIndex: =20
+
+    TextInput1_2 As text:
+        Default: =InvoiceDate
+        X: =656
+        Y: =331
+        ZIndex: =21
+
+    TextInput1_3 As text:
+        Default: =DueDate
+        X: =656
+        Y: =413
+        ZIndex: =22
+
+    TextInput1_4 As text:
+        Default: =InvoiceTotal
+        X: =656
+        Y: =495
+        ZIndex: =23
+
+    Group2_5 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =39.675324675324674
+        ZIndex: =77
+
+        Rectangle1_25 As rectangle:
+            DisabledFill: =Rectangle1_25.Fill
+            Fill: =RGBA(0, 25, 83, 1)
+            Height: =60
+            HoverFill: =Rectangle1_25.Fill
+            OnSelect: =Navigate(CustomerScreen, ScreenTransition.Fade)
+            PressedFill: =Rectangle1_25.Fill
+            TabIndex: =0
+            Width: =60
+            X: =279
+            ZIndex: =7
+
+        icon2_7 As icon.ChevronLeft:
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledFill: =icon2_7.Fill
+            Height: =23.111111111111086
+            HoverBorderColor: =ColorFade(icon2_7.BorderColor, 20%)
+            HoverColor: =ColorFade(icon2_7.Color, 20%)
+            HoverFill: =icon2_7.Fill
+            Icon: =Icon.ChevronLeft
+            OnSelect: =Back()
+            PressedBorderColor: =ColorFade(icon2_7.BorderColor, -20%)
+            PressedColor: =ColorFade(icon2_7.Color, -20%)
+            PressedFill: =icon2_7.Fill
+            TabIndex: =0
+            Width: =23.11111111111109
+            X: =9
+            Y: =24
+            ZIndex: =8
+

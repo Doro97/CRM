@@ -1,0 +1,129 @@
+OpportunityMessageScreen As screen:
+    Fill: =RGBA(237,242,246,1)
+    Height: =Max(App.Height, App.DesignHeight)
+    Width: =Max(App.Width, App.DesignWidth)
+
+    TextBox4_108 As label:
+        Align: =LayoutAlignItems.Center
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Color: =RGBA(0, 0, 0, 0.70196078)
+        Font: =Font.Lato
+        FontWeight: =FontWeight.Semibold
+        Height: =53
+        HoverBorderColor: =TextBox4_108.BorderColor
+        HoverColor: =TextBox4_108.Color
+        HoverFill: =TextBox4_108.Fill
+        LineHeight: =1.4
+        PressedBorderColor: =TextBox4_108.BorderColor
+        PressedColor: =TextBox4_108.Color
+        PressedFill: =TextBox4_108.Fill
+        Size: =20
+        Text: ="New sales opportunity created successfully"
+        VerticalAlign: =VerticalAlign.Top
+        Width: =855
+        X: =255
+        Y: =346.444444444445
+        ZIndex: =45
+
+    Button1_4 As button:
+        BorderColor: =ColorFade(Button1_4.Fill, -15%)
+        BorderThickness: =0
+        DisabledBorderColor: =ColorFade(Button1_4.BorderColor, 70%)
+        Fill: =RGBA(54,166,182,1)
+        Font: =Font.Lato
+        Height: =50
+        HoverBorderColor: =ColorFade(Button1_4.BorderColor, 20%)
+        HoverColor: =Button1_4.Color
+        HoverFill: =ColorFade(Button1_4.Fill, 20%)
+        OnSelect: =Navigate(CustomerScreen, ScreenTransition.Fade)
+        PressedBorderColor: =Button1_4.Fill
+        PressedColor: =Button1_4.Fill
+        PressedFill: =Button1_4.Color
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Size: =13
+        Text: ="Return to All Customers"
+        Width: =274
+        X: =212
+        Y: =537
+        ZIndex: =56
+
+    Button1_5 As button:
+        BorderColor: =ColorFade(Button1_5.Fill, -15%)
+        BorderThickness: =0
+        DisabledBorderColor: =ColorFade(Button1_5.BorderColor, 70%)
+        Fill: =RGBA(54,166,182,1)
+        Font: =Font.Lato
+        Height: =50
+        HoverBorderColor: =ColorFade(Button1_5.BorderColor, 20%)
+        HoverColor: =Button1_5.Color
+        HoverFill: =ColorFade(Button1_5.Fill, 20%)
+        OnSelect: =Navigate(CustomerOverviewScreen, ScreenTransition.Fade)
+        PressedBorderColor: =Button1_5.Fill
+        PressedColor: =Button1_5.Fill
+        PressedFill: =Button1_5.Color
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Size: =13
+        Text: ="Return to Customer Overview"
+        Width: =274
+        X: =535
+        Y: =537
+        ZIndex: =57
+
+    Button1_6 As button:
+        BorderColor: =ColorFade(Button1_6.Fill, -15%)
+        BorderThickness: =0
+        DisabledBorderColor: =ColorFade(Button1_6.BorderColor, 70%)
+        Fill: =RGBA(54,166,182,1)
+        Font: =Font.Lato
+        Height: =50
+        HoverBorderColor: =ColorFade(Button1_6.BorderColor, 20%)
+        HoverColor: =Button1_6.Color
+        HoverFill: =ColorFade(Button1_6.Fill, 20%)
+        OnSelect: =Navigate(OnboardClientScreen, ScreenTransition.Fade)
+        PressedBorderColor: =Button1_6.Fill
+        PressedColor: =Button1_6.Fill
+        PressedFill: =Button1_6.Color
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Size: =13
+        Text: ="Return to Add Opportunity"
+        Width: =274
+        X: =858
+        Y: =537
+        ZIndex: =58
+
+    Circle2 As circle:
+        DisabledFill: =Circle2.Fill
+        Fill: =RGBA(97,189,126,1)
+        HoverFill: =Circle2.Fill
+        PressedFill: =Circle2.Fill
+        TabIndex: =0
+        X: =633
+        Y: =200
+        ZIndex: =60
+
+    icon3 As icon.Check:
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledFill: =icon3.Fill
+        Height: =54
+        HoverBorderColor: =ColorFade(icon3.BorderColor, 20%)
+        HoverColor: =ColorFade(icon3.Color, 20%)
+        HoverFill: =icon3.Fill
+        Icon: =Icon.Check
+        PressedBorderColor: =ColorFade(icon3.BorderColor, -20%)
+        PressedColor: =ColorFade(icon3.Color, -20%)
+        PressedFill: =icon3.Fill
+        TabIndex: =0
+        Width: =54
+        X: =656.1111111111111
+        Y: =223.88888888888886
+        ZIndex: =61
+

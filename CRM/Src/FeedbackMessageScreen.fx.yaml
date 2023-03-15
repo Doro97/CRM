@@ -1,0 +1,106 @@
+FeedbackMessageScreen As screen:
+    Fill: =RGBA(237,242,246,1)
+    Height: =Max(App.Height, App.DesignHeight)
+    OnVisible: =
+    Width: =Max(App.Width, App.DesignWidth)
+
+    TextBox4_110 As label:
+        Align: =LayoutAlignItems.Center
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Color: =RGBA(0, 0, 0, 0.70196078)
+        Font: =Font.Lato
+        FontWeight: =FontWeight.Semibold
+        Height: =53
+        HoverBorderColor: =TextBox4_110.BorderColor
+        HoverColor: =TextBox4_110.Color
+        HoverFill: =TextBox4_110.Fill
+        LineHeight: =1.4
+        PressedBorderColor: =TextBox4_110.BorderColor
+        PressedColor: =TextBox4_110.Color
+        PressedFill: =TextBox4_110.Fill
+        Size: =20
+        Text: ="Feedback submitted successfully"
+        VerticalAlign: =VerticalAlign.Top
+        Width: =855
+        X: =255
+        Y: =346.444444444445
+        ZIndex: =45
+
+    Button1_11 As button:
+        BorderColor: =ColorFade(Button1_11.Fill, -15%)
+        BorderThickness: =0
+        DisabledBorderColor: =ColorFade(Button1_11.BorderColor, 70%)
+        Fill: =RGBA(54,166,182,1)
+        Font: =Font.Lato
+        Height: =50
+        HoverBorderColor: =ColorFade(Button1_11.BorderColor, 20%)
+        HoverColor: =Button1_11.Color
+        HoverFill: =ColorFade(Button1_11.Fill, 20%)
+        OnSelect: =Navigate(CustomerScreen, ScreenTransition.Fade)
+        PressedBorderColor: =Button1_11.Fill
+        PressedColor: =Button1_11.Fill
+        PressedFill: =Button1_11.Color
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Size: =13
+        Text: ="Return to All Customers"
+        Width: =274
+        X: =384
+        Y: =544
+        ZIndex: =56
+
+    Button1_10 As button:
+        BorderColor: =ColorFade(Button1_10.Fill, -15%)
+        BorderThickness: =0
+        DisabledBorderColor: =ColorFade(Button1_10.BorderColor, 70%)
+        Fill: =RGBA(54,166,182,1)
+        Font: =Font.Lato
+        Height: =50
+        HoverBorderColor: =ColorFade(Button1_10.BorderColor, 20%)
+        HoverColor: =Button1_10.Color
+        HoverFill: =ColorFade(Button1_10.Fill, 20%)
+        OnSelect: |-
+            =ClearCollect(CustomerCSATCollect, {CustomerId:GalleryCustomer.Selected.ClientName, Value: RoundUp(Coalesce(Sum(Filter(CustomerFeedbackList, CustomerId = GalleryCustomer.Selected.ClientName), ServiceRating),0)/CountRows(Filter(CustomerFeedbackList, CustomerId = GalleryCustomer.Selected.ClientName)) * 100 / 5, 0)});Collect(CustomerCSATCollect, {CustomerId:GalleryCustomer.Selected.ClientName, Value:100 - RoundUp(Coalesce(Sum(Filter(CustomerFeedbackList, CustomerId = GalleryCustomer.Selected.ClientName), ServiceRating),0)/CountRows(Filter(CustomerFeedbackList, CustomerId = GalleryCustomer.Selected.ClientName)) * 100 / 5, 0)});ClearCollect(CustomerUsageCollect, {CustomerId:GalleryCustomer.Selected.ClientName, Value: RoundUp(Coalesce(Sum(Filter(CustomerFeedbackList, CustomerId = GalleryCustomer.Selected.ClientName), ServiceCount),0)/CountRows(Filter(CustomerFeedbackList, CustomerId = GalleryCustomer.Selected.ClientName)) * 100 / 5, 0)});Collect(CustomerUsageCollect, {CustomerId:GalleryCustomer.Selected.ClientName, Value:100 - RoundUp(Coalesce(Sum(Filter(CustomerFeedbackList, CustomerId = GalleryCustomer.Selected.ClientName), ServiceCount),0)/CountRows(Filter(CustomerFeedbackList, CustomerId = GalleryCustomer.Selected.ClientName)) * 100 / 5, 0)});Navigate(CustomerOverviewScreen, ScreenTransition.Fade)
+        PressedBorderColor: =Button1_10.Fill
+        PressedColor: =Button1_10.Fill
+        PressedFill: =Button1_10.Color
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Size: =13
+        Text: ="Return to Customer Overview"
+        Width: =274
+        X: =707
+        Y: =544
+        ZIndex: =57
+
+    Circle2_2 As circle:
+        DisabledFill: =Circle2_2.Fill
+        Fill: =RGBA(97,189,126,1)
+        HoverFill: =Circle2_2.Fill
+        PressedFill: =Circle2_2.Fill
+        TabIndex: =0
+        X: =633
+        Y: =200
+        ZIndex: =60
+
+    icon3_2 As icon.Check:
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledFill: =icon3_2.Fill
+        Height: =54
+        HoverBorderColor: =ColorFade(icon3_2.BorderColor, 20%)
+        HoverColor: =ColorFade(icon3_2.Color, 20%)
+        HoverFill: =icon3_2.Fill
+        Icon: =Icon.Check
+        PressedBorderColor: =ColorFade(icon3_2.BorderColor, -20%)
+        PressedColor: =ColorFade(icon3_2.Color, -20%)
+        PressedFill: =icon3_2.Fill
+        TabIndex: =0
+        Width: =54
+        X: =656.1111111111111
+        Y: =223.88888888888886
+        ZIndex: =61
+

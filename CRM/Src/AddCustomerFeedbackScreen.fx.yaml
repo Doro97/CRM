@@ -1,0 +1,517 @@
+AddCustomerFeedbackScreen As screen:
+    Fill: =RGBA(237,242,246,1)
+    Height: =Max(App.Height, App.DesignHeight)
+    OnVisible: |-
+        =UpdateContext({ResetCustomerFeedbackField:true});UpdateContext({ResetCustomerFeedbackField:false})
+    Width: =Max(App.Width, App.DesignWidth)
+
+    Rectangle1_11 As rectangle:
+        BorderColor: =RGBA(234,235,236,1)
+        BorderThickness: =1
+        DisabledFill: =Rectangle1_11.Fill
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =625
+        HoverFill: =Rectangle1_11.Fill
+        PressedFill: =Rectangle1_11.Fill
+        TabIndex: =0
+        Width: =1348
+        X: =9
+        Y: =70
+        ZIndex: =1
+
+    Rectangle1_12 As rectangle:
+        DisabledFill: =Rectangle1_12.Fill
+        Fill: =RGBA(0, 25, 83, 1)
+        Height: =60
+        HoverFill: =Rectangle1_12.Fill
+        PressedFill: =Rectangle1_12.Fill
+        TabIndex: =0
+        Width: =1366
+        ZIndex: =2
+
+    TextBox3_10 As label:
+        Align: =TextPosition.Right
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.Lato
+        Height: =21.008326212565123
+        HoverBorderColor: =TextBox3_10.BorderColor
+        HoverColor: =TextBox3_10.Color
+        HoverFill: =TextBox3_10.Fill
+        PressedBorderColor: =TextBox3_10.BorderColor
+        PressedColor: =TextBox3_10.Color
+        PressedFill: =TextBox3_10.Fill
+        Size: =9
+        Text: =User().FullName
+        Width: =256
+        X: =1091.6666666666665
+        Y: =19.166666666666668
+        ZIndex: =4
+
+    Group2_4 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =10
+
+        Rectangle1_13 As rectangle:
+            DisabledFill: =Rectangle1_13.Fill
+            Fill: =RGBA(0, 25, 83, 1)
+            Height: =60
+            HoverFill: =Rectangle1_13.Fill
+            OnSelect: =Back()
+            PressedFill: =Rectangle1_13.Fill
+            TabIndex: =0
+            Width: =60
+            Y: =0.3246753246753258
+            ZIndex: =7
+
+        icon2_4 As icon.ChevronLeft:
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledFill: =icon2_4.Fill
+            Height: =23
+            HoverBorderColor: =ColorFade(icon2_4.BorderColor, 20%)
+            HoverColor: =ColorFade(icon2_4.Color, 20%)
+            HoverFill: =icon2_4.Fill
+            Icon: =Icon.ChevronLeft
+            OnSelect: =Back()
+            PressedBorderColor: =ColorFade(icon2_4.BorderColor, -20%)
+            PressedColor: =ColorFade(icon2_4.Color, -20%)
+            PressedFill: =icon2_4.Fill
+            TabIndex: =0
+            Width: =23
+            X: =18.444444444444457
+            Y: =18.769119769119783
+            ZIndex: =8
+
+    TextBox4_95 As label:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Color: =RGBA(0, 0, 0, 0.70196078)
+        Font: =Font.'Lato Light'
+        FontWeight: =FontWeight.Semibold
+        Height: =38
+        HoverBorderColor: =TextBox4_95.BorderColor
+        HoverColor: =TextBox4_95.Color
+        HoverFill: =TextBox4_95.Fill
+        LineHeight: =1.4
+        PressedBorderColor: =TextBox4_95.BorderColor
+        PressedColor: =TextBox4_95.Color
+        PressedFill: =TextBox4_95.Fill
+        Size: =17
+        Text: ="How many services did you use last quarter?"
+        VerticalAlign: =VerticalAlign.Top
+        Width: =546
+        X: =66.44444444444451
+        Y: =120.00000000000005
+        ZIndex: =12
+
+    TextBox4_96 As label:
+        Align: =TextPosition.Right
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Color: =RGBA(128, 128, 128, 1)
+        Font: =Font.Lato
+        Height: =27
+        HoverBorderColor: =TextBox4_96.BorderColor
+        HoverColor: =TextBox4_96.Color
+        HoverFill: =TextBox4_96.Fill
+        PressedBorderColor: =TextBox4_96.BorderColor
+        PressedColor: =TextBox4_96.Color
+        PressedFill: =TextBox4_96.Fill
+        Size: =10
+        Text: ="ALL FIELDS ARE MANDATORY"
+        Width: =338
+        X: =815.7777777777776
+        Y: =718.8888888888889
+        ZIndex: =13
+
+    DropdownService As dropdown:
+        BorderColor: =RGBA(212,212,212,1)
+        ChevronBackground: =RGBA(62,96,170,0)
+        ChevronFill: =RGBA(179, 179, 179, 1)
+        Default: ="Select Option"
+        Font: =Font.Lato
+        HoverBorderColor: =ColorFade(DropdownService.BorderColor, 15%)
+        HoverFill: =ColorFade(RGBA(54,166,182,1), 70%)
+        Items: =["Select Option","1","2","3","4","5"]
+        PressedBorderColor: =DropdownService.HoverBorderColor
+        PressedFill: =RGBA(54,166,182,1)
+        Reset: =ResetCustomerFeedbackField
+        SelectionFill: =RGBA(54,166,182,1)
+        Width: =365
+        X: =73.00000000000005
+        Y: =176
+        ZIndex: =14
+
+    TextBox4_103 As label:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Color: =RGBA(0, 0, 0, 0.70196078)
+        Font: =Font.'Lato Light'
+        FontWeight: =FontWeight.Semibold
+        Height: =38
+        HoverBorderColor: =TextBox4_103.BorderColor
+        HoverColor: =TextBox4_103.Color
+        HoverFill: =TextBox4_103.Fill
+        LineHeight: =1.4
+        PressedBorderColor: =TextBox4_103.BorderColor
+        PressedColor: =TextBox4_103.Color
+        PressedFill: =TextBox4_103.Fill
+        Size: =17
+        Text: ="How often do you need technical support?"
+        VerticalAlign: =VerticalAlign.Top
+        Width: =546
+        X: =66.44444444444451
+        Y: =288.5555555555548
+        ZIndex: =15
+
+    TextBox4_104 As label:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Color: =RGBA(0, 0, 0, 0.70196078)
+        Font: =Font.'Lato Light'
+        FontWeight: =FontWeight.Semibold
+        Height: =38
+        HoverBorderColor: =TextBox4_104.BorderColor
+        HoverColor: =TextBox4_104.Color
+        HoverFill: =TextBox4_104.Fill
+        LineHeight: =1.4
+        PressedBorderColor: =TextBox4_104.BorderColor
+        PressedColor: =TextBox4_104.Color
+        PressedFill: =TextBox4_104.Fill
+        Size: =17
+        Text: ="When do you expect an increase in volume?"
+        VerticalAlign: =VerticalAlign.Top
+        Width: =546
+        X: =66.44444444444451
+        Y: =437.9999999999993
+        ZIndex: =16
+
+    DatePickerVolume As datepicker:
+        BorderColor: =RGBA(212,212,212,1)
+        FocusedBorderThickness: =1
+        Font: =Font.Lato
+        HoverBorderColor: =DatePickerVolume.BorderColor
+        HoverFill: =DatePickerVolume.Fill
+        OnSelect: =
+        PaddingTop: =5
+        PressedBorderColor: =DatePickerVolume.BorderColor
+        PressedFill: =DatePickerVolume.Fill
+        Reset: =ResetCustomerFeedbackField
+        Width: =365
+        X: =73.44444444444451
+        Y: =494
+        ZIndex: =17
+
+    SliderTechnicalSupport As slider:
+        HandleActiveFill: =SliderTechnicalSupport.HandleFill
+        HandleHoverFill: =SliderTechnicalSupport.HandleFill
+        HoverBorderColor: =ColorFade(SliderTechnicalSupport.BorderColor, 30%)
+        PressedBorderColor: =ColorFade(SliderTechnicalSupport.BorderColor, -30%)
+        RailFill: =RGBA(212,212,212,1)
+        RailHoverFill: =ColorFade(SliderTechnicalSupport.RailFill, 15%)
+        Reset: =ResetCustomerFeedbackField
+        ShowValue: =false
+        ValueFill: =RGBA(54,166,182,1)
+        ValueHoverFill: =ColorFade(SliderTechnicalSupport.ValueFill, 15%)
+        Width: =365
+        X: =73.44444444444451
+        Y: =336.5555555555545
+        ZIndex: =18
+
+    TextBox4_105 As label:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Color: =RGBA(0, 0, 0, 0.70196078)
+        Font: =Font.'Lato Light'
+        FontWeight: =FontWeight.Semibold
+        Height: =38
+        HoverBorderColor: =TextBox4_105.BorderColor
+        HoverColor: =TextBox4_105.Color
+        HoverFill: =TextBox4_105.Fill
+        LineHeight: =1.4
+        PressedBorderColor: =TextBox4_105.BorderColor
+        PressedColor: =TextBox4_105.Color
+        PressedFill: =TextBox4_105.Fill
+        Size: =17
+        Text: ="How satisfied are you with our service?"
+        VerticalAlign: =VerticalAlign.Top
+        Width: =546
+        X: =670
+        Y: =121
+        ZIndex: =19
+
+    TextBox4_106 As label:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Color: =RGBA(0, 0, 0, 0.70196078)
+        Font: =Font.'Lato Light'
+        FontWeight: =FontWeight.Semibold
+        Height: =38
+        HoverBorderColor: =TextBox4_106.BorderColor
+        HoverColor: =TextBox4_106.Color
+        HoverFill: =TextBox4_106.Fill
+        LineHeight: =1.4
+        PressedBorderColor: =TextBox4_106.BorderColor
+        PressedColor: =TextBox4_106.Color
+        PressedFill: =TextBox4_106.Fill
+        Size: =17
+        Text: ="How satisfied are you with our pricing?"
+        VerticalAlign: =VerticalAlign.Top
+        Width: =546
+        X: =670
+        Y: =289
+        ZIndex: =20
+
+    TextBox4_107 As label:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Color: =RGBA(0, 0, 0, 0.70196078)
+        Font: =Font.'Lato Light'
+        FontWeight: =FontWeight.Semibold
+        Height: =38
+        HoverBorderColor: =TextBox4_107.BorderColor
+        HoverColor: =TextBox4_107.Color
+        HoverFill: =TextBox4_107.Fill
+        LineHeight: =1.4
+        PressedBorderColor: =TextBox4_107.BorderColor
+        PressedColor: =TextBox4_107.Color
+        PressedFill: =TextBox4_107.Fill
+        Size: =17
+        Text: ="Any additional comments"
+        VerticalAlign: =VerticalAlign.Top
+        Width: =546
+        X: =670
+        Y: =438
+        ZIndex: =21
+
+    ButtonCustomerFeedback As button:
+        BorderColor: =ColorFade(ButtonCustomerFeedback.Fill, -15%)
+        BorderThickness: =0
+        DisabledBorderColor: =ColorFade(ButtonCustomerFeedback.BorderColor, 70%)
+        DisabledColor: =ColorFade(RGBA(255, 255, 255, 1), 70%)
+        DisplayMode: =If(DropdownService.SelectedText.Value = "Select Option" || Len(TextInputComments.Text) = 0, DisplayMode.Disabled, DisplayMode.Edit)
+        Fill: =RGBA(54,166,182,1)
+        Font: =Font.Lato
+        Height: =46
+        HoverBorderColor: =ColorFade(ButtonCustomerFeedback.BorderColor, 20%)
+        HoverColor: =ButtonCustomerFeedback.Color
+        HoverFill: =ColorFade(ButtonCustomerFeedback.Fill, 20%)
+        OnSelect: |-
+            =If(
+                DropdownService.SelectedText.Value <> "Select Option" && Len(TextInputComments.Text) > 0, 
+                    Collect(CustomerFeedbackList, {PrimaryId:Max(CustomerFeedbackList, PrimaryId)+1,CreatedOnDateTime:Today(),CustomerId:GalleryCustomer.Selected.ClientName,
+                     ServiceCount:Value(DropdownService.SelectedText.Value), TechnicalSupportCount:Value(SliderTechnicalSupport.Value), VolumeDate:Text(DatePickerVolume.SelectedDate),
+                     ServiceRating:Value(RatingService.Value), PriceRating:Value(RatingPrice.Value), Comments:TextInputComments.Text, Email:GalleryCustomer.Selected.ClientName});
+                    Navigate(FeedbackMessageScreen, ScreenTransition.Fade))
+        PaddingLeft: =40
+        PressedBorderColor: =ButtonCustomerFeedback.Fill
+        PressedColor: =ButtonCustomerFeedback.Fill
+        PressedFill: =ButtonCustomerFeedback.Color
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Size: =12
+        Text: ="Submit"
+        Width: =169
+        X: =1176.8888888888891
+        Y: =709.1111111111111
+        ZIndex: =23
+
+    Image3_4 As image:
+        ApplyEXIFOrientation: =false
+        DisabledFill: =RGBA(193, 193, 193, 0)
+        DisplayMode: =If(If(DropdownService.SelectedText.Value = "Select Option" || Len(TextInputComments.Text) = 0, true, false),DisplayMode.Disabled,DisplayMode.Edit)
+        Height: =23
+        HoverBorderColor: =ColorFade(Image3_4.BorderColor, 20%)
+        HoverFill: =ColorFade(Image3_4.Fill, 20%)
+        Image: ='group-13'
+        OnSelect: |-
+            =If(DropdownService.SelectedText.Value <> "Select Option" && Len(TextInputComments.Text) > 0, Collect(CustomerFeedbackList, {PrimaryId:Max(CustomerFeedbackList, PrimaryId)+1,CreatedOnDateTime:Today(),CustomerId:GalleryCustomer.Selected.ClientName, ServiceCount:Value(DropdownService.SelectedText.Value), TechnicalSupportCount:Value(SliderTechnicalSupport.Value), VolumeDate:Text(DatePickerVolume.SelectedDate), ServiceRating:Value(RatingService.Value), PriceRating:Value(RatingPrice.Value), Comments:TextInputComments.Text, Email:GalleryCustomer.Selected.ClientName});Navigate(FeedbackMessageScreen, ScreenTransition.Fade))
+        PressedBorderColor: =ColorFade(Image3_4.BorderColor, -20%)
+        PressedFill: =ColorFade(Image3_4.Fill, -20%)
+        TabIndex: =0
+        Width: =23
+        X: =1209.7777777777757
+        Y: =720.8888888888889
+        ZIndex: =24
+
+    RatingService As rating:
+        AccessibleLabel: =""
+        BorderStyle: =BorderStyle.Solid
+        ContentLanguage: =""
+        Default: =3
+        DisabledFill: =RatingService.Fill
+        DisplayMode: =DisplayMode.Edit
+        Fill: =RGBA(0, 0, 0, 0)
+        FocusedBorderColor: =Self.BorderColor
+        Height: =44
+        HoverFill: =RatingService.Fill
+        PressedFill: =RatingService.Fill
+        RatingFill: =RGBA(54,166,182,1)
+        Reset: =ResetCustomerFeedbackField
+        TabIndex: =0
+        Width: =200
+        X: =670
+        Y: =163.49999999999986
+        ZIndex: =25
+
+    RatingPrice As rating:
+        AccessibleLabel: =""
+        BorderStyle: =BorderStyle.Solid
+        ContentLanguage: =""
+        Default: =3
+        DisabledFill: =RatingPrice.Fill
+        DisplayMode: =DisplayMode.Edit
+        Fill: =RGBA(0, 0, 0, 0)
+        FocusedBorderColor: =Self.BorderColor
+        Height: =44
+        HoverFill: =RatingPrice.Fill
+        PressedFill: =RatingPrice.Fill
+        RatingFill: =RGBA(54,166,182,1)
+        Reset: =ResetCustomerFeedbackField
+        TabIndex: =0
+        Width: =200
+        X: =670
+        Y: =334.66666666666663
+        ZIndex: =26
+
+    TextInputComments As text:
+        BorderColor: =RGBA(212,212,212,1)
+        Default: =
+        Font: =Font.Lato
+        Height: =153.55555555555554
+        HoverFill: =ColorFade(RGBA(54,166,182,1), 70%)
+        Mode: =TextMode.MultiLine
+        PaddingBottom: =10
+        PaddingTop: =10
+        PressedBorderColor: =TextInputComments.HoverBorderColor
+        PressedColor: =TextInputComments.Color
+        PressedFill: =TextInputComments.Fill
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Reset: =ResetCustomerFeedbackField
+        Width: =564
+        X: =676.6666666666665
+        Y: =491
+        ZIndex: =27
+
+    HtmlText2_4 As htmlViewer:
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.'Lato Black'
+        Height: =29
+        HoverBorderColor: =HtmlText2_4.BorderColor
+        HtmlText: |-
+            =GalleryCustomer.Selected.ClientName & "&nbsp;&nbsp;|&nbsp;&nbsp;<span style=font-size:15px>Add Customer Feedback</span>"
+        PaddingBottom: =0
+        PaddingLeft: =0
+        PaddingRight: =0
+        PaddingTop: =0
+        PressedBorderColor: =HtmlText2_4.BorderColor
+        Size: =15
+        Width: =617
+        X: =53
+        Y: =18.617977528089888
+        ZIndex: =28
+
+    TextBox4_111 As label:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Color: =RGBA(179, 179, 179, 1)
+        Font: =Font.'Lato Light'
+        FontWeight: =FontWeight.Semibold
+        Height: =21
+        HoverBorderColor: =TextBox4_111.BorderColor
+        HoverColor: =TextBox4_111.Color
+        HoverFill: =TextBox4_111.Fill
+        LineHeight: =1.4
+        PressedBorderColor: =TextBox4_111.BorderColor
+        PressedColor: =TextBox4_111.Color
+        PressedFill: =TextBox4_111.Fill
+        Size: =8
+        Text: ="NEVER"
+        VerticalAlign: =VerticalAlign.Top
+        Width: =47
+        X: =66
+        Y: =376
+        ZIndex: =29
+
+    TextBox4_112 As label:
+        Align: =TextPosition.Right
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Color: =RGBA(179, 179, 179, 1)
+        Font: =Font.'Lato Light'
+        FontWeight: =FontWeight.Semibold
+        Height: =21
+        HoverBorderColor: =TextBox4_112.BorderColor
+        HoverColor: =TextBox4_112.Color
+        HoverFill: =TextBox4_112.Fill
+        LineHeight: =1.4
+        PressedBorderColor: =TextBox4_112.BorderColor
+        PressedColor: =TextBox4_112.Color
+        PressedFill: =TextBox4_112.Fill
+        Size: =8
+        Text: ="ALWAYS"
+        VerticalAlign: =VerticalAlign.Top
+        Width: =63
+        X: =378.59281437125753
+        Y: =376
+        ZIndex: =30
+
+    TextBox4_113 As label:
+        Align: =LayoutAlignItems.Center
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Color: =RGBA(179, 179, 179, 1)
+        Font: =Font.'Lato Light'
+        FontWeight: =FontWeight.Semibold
+        Height: =21
+        HoverBorderColor: =TextBox4_113.BorderColor
+        HoverColor: =TextBox4_113.Color
+        HoverFill: =TextBox4_113.Fill
+        LineHeight: =1.4
+        PressedBorderColor: =TextBox4_113.BorderColor
+        PressedColor: =TextBox4_113.Color
+        PressedFill: =TextBox4_113.Fill
+        Size: =8
+        Text: ="SOMETIMES"
+        VerticalAlign: =VerticalAlign.Top
+        Width: =82
+        X: =214.83333333333334
+        Y: =376
+        ZIndex: =31
+
+    Group1 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =34
+
+        Rectangle7 As rectangle:
+            DisabledFill: =Rectangle7.Fill
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =38.55555555555554
+            HoverFill: =Rectangle7.Fill
+            OnSelect: =
+            PressedFill: =Rectangle7.Fill
+            TabIndex: =0
+            Width: =43.5
+            X: =394.5
+            Y: =494.555555555556
+            ZIndex: =32
+
+        icon1 As icon.Calendar:
+            Color: =RGBA(179, 179, 179, 1)
+            DisabledFill: =icon1.Fill
+            Height: =24.95983379501388
+            HoverBorderColor: =ColorFade(icon1.BorderColor, 20%)
+            HoverColor: =ColorFade(icon1.Color, 20%)
+            HoverFill: =icon1.Fill
+            Icon: =Icon.AddToCalendar
+            OnSelect: =
+            PressedBorderColor: =ColorFade(icon1.BorderColor, -20%)
+            PressedColor: =ColorFade(icon1.Color, -20%)
+            PressedFill: =icon1.Fill
+            TabIndex: =0
+            Width: =24.95983379501388
+            X: =404.66666666666663
+            Y: =501.6666666666673
+            ZIndex: =33
+

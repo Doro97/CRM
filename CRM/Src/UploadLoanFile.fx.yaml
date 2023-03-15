@@ -1,0 +1,199 @@
+UploadLoanFile As screen:
+    Fill: =RGBA(237,242,246,1)
+    Height: =Max(App.Height, App.DesignHeight)
+    Width: =Max(App.Width, App.DesignWidth)
+
+    Rectangle1_5 As rectangle:
+        BorderColor: =RGBA(234,235,236,1)
+        BorderThickness: =1
+        DisabledFill: =Rectangle1_5.Fill
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =687
+        HoverFill: =Rectangle1_5.Fill
+        OnSelect: =
+        PressedFill: =Rectangle1_5.Fill
+        TabIndex: =0
+        Width: =959
+        X: =389
+        Y: =71
+        ZIndex: =1
+
+    Rectangle1_4 As rectangle:
+        DisabledFill: =Rectangle1_4.Fill
+        Fill: =RGBA(0, 25, 83, 1)
+        Height: =60
+        HoverFill: =Rectangle1_4.Fill
+        PressedFill: =Rectangle1_4.Fill
+        TabIndex: =0
+        Width: =1366
+        ZIndex: =2
+
+    TextBox4_33 As label:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Color: =RGBA(0,25,83,.8)
+        Font: =Font.'Lato Black'
+        Height: =24
+        HoverBorderColor: =TextBox4_33.BorderColor
+        HoverColor: =TextBox4_33.Color
+        HoverFill: =TextBox4_33.Fill
+        PressedBorderColor: =TextBox4_33.BorderColor
+        PressedColor: =TextBox4_33.Color
+        PressedFill: =TextBox4_33.Fill
+        Size: =10
+        Text: ="Loan Upload Details"
+        Width: =360.6756756756757
+        X: =29
+        Y: =90
+        ZIndex: =3
+
+    HtmlText2_2 As htmlViewer:
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.'Lato Black'
+        Height: =29
+        HoverBorderColor: =HtmlText2_2.BorderColor
+        HtmlText: |-
+            =GalleryCustomer.Selected.ClientName & "&nbsp;&nbsp;|&nbsp;&nbsp;<span style=font-size:15px>" & "Loan Upload"
+        PaddingBottom: =0
+        PaddingLeft: =0
+        PaddingRight: =0
+        PaddingTop: =0
+        PressedBorderColor: =HtmlText2_2.BorderColor
+        Size: =15
+        Width: =617
+        X: =53
+        Y: =18.617977528089888
+        ZIndex: =4
+
+    TextBox3_14 As label:
+        Align: =TextPosition.Right
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.Lato
+        Height: =21
+        HoverBorderColor: =TextBox3_14.BorderColor
+        HoverColor: =TextBox3_14.Color
+        HoverFill: =TextBox3_14.Fill
+        PressedBorderColor: =TextBox3_14.BorderColor
+        PressedColor: =TextBox3_14.Color
+        PressedFill: =TextBox3_14.Fill
+        Size: =9
+        Text: =User().FullName
+        Width: =256
+        X: =1091.6666666666665
+        Y: =20
+        ZIndex: =5
+
+    TextBox4_34 As label:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Color: =RGBA(0,25,83,.8)
+        Font: =Font.'Lato Black'
+        Height: =24
+        HoverBorderColor: =TextBox4_34.BorderColor
+        HoverColor: =TextBox4_34.Color
+        HoverFill: =TextBox4_34.Fill
+        PressedBorderColor: =TextBox4_34.BorderColor
+        PressedColor: =TextBox4_34.Color
+        PressedFill: =TextBox4_34.Fill
+        Size: =10
+        Text: ="Loan Upload Summary"
+        Width: =360.6756756756757
+        X: =403
+        Y: =88
+        ZIndex: =6
+
+    Label1 As label:
+        FontWeight: =FontWeight.Lighter
+        Size: =12
+        Text: ="Upload loan file"
+        X: =65
+        Y: =111
+        ZIndex: =9
+
+    Icon2 As icon.Attachment:
+        Height: =23
+        Icon: =Icon.PaperClip
+        Width: =28
+        X: =45
+        Y: =117
+        ZIndex: =10
+
+    Image4 As image:
+        Height: =203
+        Image: =Last(AttachmentControl.Attachments).Value
+        Width: =279
+        X: =45
+        Y: =435
+        ZIndex: =11
+
+    Button2 As button:
+        OnSelect: |+
+            =Set(varDemoFromAttachmentControl,JSON(Image4.Image, JSONFormat.IncludeBinaryData));
+            Set(varBase64Only, Mid(varDemoFromAttachmentControl,Find(",", varDemoFromAttachmentControl)+1,Len
+            (varDemoFromAttachmentControl)-Find(",", varDemoFromAttachmentControl)-1));
+            UploadandImport.Run(Last(AttachmentControl.Attachments).Name, varBase64Only);
+            Reset(AttachmentControl);
+            
+            
+        Text: ="Upload File"
+        X: =94
+        Y: =360
+        ZIndex: =12
+
+    AttachmentControl As attachments:
+        BorderColor: =Color.Black
+        Height: =111
+        IsInDataCard: =true
+        Items: =
+        OnAddFile: |
+            =Set(varShowLoading,true);
+            Set(varDemoFromAttachmentControl,JSON(Image4.Image, JSONFormat.IncludeBinaryData));
+            Set(varBase64Only, Mid(varDemoFromAttachmentControl,Find(",", varDemoFromAttachmentControl)+1,Len
+            (varDemoFromAttachmentControl)-Find(",", varDemoFromAttachmentControl)-1));
+            
+            Set(varShowLoading,false);
+        PaddingBottom: =5
+        PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+        PaddingRight: =5
+        PaddingTop: =5
+        Width: =316
+        X: =37
+        Y: =207
+        ZIndex: =13
+
+    Group2_1 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =39.675324675324674
+        ZIndex: =77
+
+        Rectangle1_21 As rectangle:
+            DisabledFill: =Rectangle1_21.Fill
+            Fill: =RGBA(0, 25, 83, 1)
+            Height: =60
+            HoverFill: =Rectangle1_21.Fill
+            OnSelect: =Navigate(CustomerScreen, ScreenTransition.Fade)
+            PressedFill: =Rectangle1_21.Fill
+            TabIndex: =0
+            Width: =60
+            X: =279
+            ZIndex: =7
+
+        icon2_1 As icon.ChevronLeft:
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledFill: =icon2_1.Fill
+            Height: =23.111111111111086
+            HoverBorderColor: =ColorFade(icon2_1.BorderColor, 20%)
+            HoverColor: =ColorFade(icon2_1.Color, 20%)
+            HoverFill: =icon2_1.Fill
+            Icon: =Icon.ChevronLeft
+            OnSelect: =Back()
+            PressedBorderColor: =ColorFade(icon2_1.BorderColor, -20%)
+            PressedColor: =ColorFade(icon2_1.Color, -20%)
+            PressedFill: =icon2_1.Fill
+            TabIndex: =0
+            Width: =23.11111111111109
+            X: =9
+            Y: =24
+            ZIndex: =8
+

@@ -1,0 +1,582 @@
+RPACustomerScreen As screen:
+    Fill: =RGBA(237, 242, 246, 1)
+    Height: =Max(App.Height, App.DesignHeight)
+    OnVisible: |-
+        =UpdateContext({ResetSearch:true});
+        UpdateContext({ResetSearch:false});
+        If(IsEmpty(CustomerFeedbackList), ClearCollect(CustomerFeedbackList, CustomerFeedback));
+        If(IsEmpty(CustomerOpportunityList), ClearCollect(CustomerOpportunityList, CustomerOpportunity))
+    Width: =Max(App.Width, App.DesignWidth)
+
+    Rectangle1_20 As rectangle:
+        DisabledFill: =Rectangle1_20.Fill
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =655
+        HoverFill: =Rectangle1_20.Fill
+        PressedFill: =Rectangle1_20.Fill
+        TabIndex: =0
+        Width: =363
+        X: =1003
+        Y: =110
+        ZIndex: =1
+
+    Rectangle10_2 As rectangle:
+        DisabledFill: =Rectangle10_2.Fill
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =640.4444444444445
+        HoverFill: =Rectangle10_2.Fill
+        PressedFill: =Rectangle10_2.Fill
+        TabIndex: =0
+        Width: =1021
+        Y: =127.55555555555554
+        ZIndex: =2
+
+    Rectangle1_19 As rectangle:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        BorderStyle: =BorderStyle.None
+        DisabledFill: =Rectangle1_19.Fill
+        Fill: =RGBA(9, 33, 98, 1)
+        Height: =133
+        HoverFill: =Rectangle1_19.Fill
+        PressedFill: =Rectangle1_19.Fill
+        TabIndex: =0
+        Width: =1366
+        ZIndex: =3
+
+    Image1_1 As image:
+        ApplyEXIFOrientation: =false
+        Height: =17.1
+        HoverBorderColor: =ColorFade(Image1_1.BorderColor, 20%)
+        HoverFill: =ColorFade(Image1_1.Fill, 20%)
+        Image: =home
+        OnSelect: =Navigate(HomePageScreen)
+        PressedBorderColor: =ColorFade(Image1_1.BorderColor, -20%)
+        PressedFill: =ColorFade(Image1_1.Fill, -20%)
+        TabIndex: =0
+        Width: =20.5
+        X: =20
+        Y: =21.5
+        ZIndex: =4
+
+    TextBox1_1 As label:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.Lato
+        FontWeight: =FontWeight.Semibold
+        Height: =29
+        HoverBorderColor: =TextBox1_1.BorderColor
+        HoverColor: =TextBox1_1.Color
+        HoverFill: =TextBox1_1.Fill
+        PressedBorderColor: =TextBox1_1.BorderColor
+        PressedColor: =TextBox1_1.Color
+        PressedFill: =TextBox1_1.Fill
+        Size: =15
+        Text: ="Clients"
+        VerticalAlign: =VerticalAlign.Top
+        Width: =617
+        X: =53
+        Y: =14
+        ZIndex: =5
+
+    TextBox1_5 As label:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.'Lato Black'
+        Height: =35
+        HoverBorderColor: =TextBox1_5.BorderColor
+        HoverColor: =TextBox1_5.Color
+        HoverFill: =TextBox1_5.Fill
+        PressedBorderColor: =TextBox1_5.BorderColor
+        PressedColor: =TextBox1_5.Color
+        PressedFill: =TextBox1_5.Fill
+        Size: =18
+        Text: ="Dashboard"
+        VerticalAlign: =VerticalAlign.Top
+        Width: =131
+        X: =1216
+        Y: =21
+        ZIndex: =7
+
+    TextInputSearch_1 As text:
+        BorderColor: =RGBA(163,171,193,1)
+        Color: =RGBA(255, 255, 255, 1)
+        Default: =""
+        Fill: =RGBA(0, 0, 0, 0)
+        Font: =Font.Lato
+        HintText: ="Search Client"
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(190, 202, 226, 0), 30%)
+        PressedBorderColor: =TextInputSearch_1.HoverBorderColor
+        PressedColor: =TextInputSearch_1.Color
+        PressedFill: =TextInputSearch_1.Fill
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Reset: =ResetSearch
+        Size: =10
+        Width: =348
+        X: =20
+        Y: =70
+        ZIndex: =8
+
+    iconSearch_1 As icon.Search:
+        Color: =RGBA(163,171,193,1)
+        DisabledFill: =iconSearch_1.Fill
+        Height: =20
+        HoverBorderColor: =ColorFade(iconSearch_1.BorderColor, 20%)
+        HoverColor: =ColorFade(iconSearch_1.Color, 20%)
+        HoverFill: =iconSearch_1.Fill
+        Icon: =Icon.Search
+        PressedBorderColor: =ColorFade(iconSearch_1.BorderColor, -20%)
+        PressedColor: =ColorFade(iconSearch_1.Color, -20%)
+        PressedFill: =iconSearch_1.Fill
+        TabIndex: =0
+        Width: =20
+        X: =340.7777777777778
+        Y: =79.66666666666666
+        ZIndex: =9
+
+    GalleryCustomer_1 As gallery.galleryVertical:
+        DisabledBorderColor: =GalleryCustomer_1.BorderColor
+        DisabledFill: =GalleryCustomer_1.Fill
+        Height: =589
+        HoverBorderColor: =GalleryCustomer_1.BorderColor
+        HoverFill: =GalleryCustomer_1.Fill
+        Items: ='LPA Client List'
+        Layout: =Layout.Vertical
+        PressedBorderColor: =GalleryCustomer_1.BorderColor
+        PressedFill: =GalleryCustomer_1.Fill
+        TemplatePadding: =0
+        TemplateSize: =44.4444444444445
+        Transition: =BorderStyle.None
+        Visible: =CountRows(GalleryCustomer_1.AllItems) > 0
+        Width: =1019
+        Y: =179
+        ZIndex: =10
+
+        Rectangle3_4 As rectangle:
+            DisabledFill: =Rectangle3_4.Fill
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =44.4444444444445
+            HoverFill: =Rectangle3_4.Fill
+            PressedFill: =Rectangle3_4.Fill
+            TabIndex: =0
+            Width: =1019
+            ZIndex: =1
+
+        TextBox4_26 As label:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            Color: =RGBA(47, 41, 43, 0.8)
+            Font: =Font.Lato
+            Height: =44.4444444444445
+            HoverBorderColor: =TextBox4_26.BorderColor
+            HoverColor: =TextBox4_26.Color
+            HoverFill: =TextBox4_26.Fill
+            LineHeight: =1
+            PressedBorderColor: =TextBox4_26.BorderColor
+            PressedColor: =TextBox4_26.Color
+            PressedFill: =TextBox4_26.Fill
+            Size: =10
+            Text: =ThisItem.PortfolioValue 
+            Width: =285.55555555555565
+            X: =433.66666666666697
+            ZIndex: =2
+
+        TextBox4_25 As label:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            Color: =RGBA(47, 41, 43, 0.8)
+            Font: =Font.Lato
+            Height: =44.4444444444445
+            HoverBorderColor: =TextBox4_25.BorderColor
+            HoverColor: =TextBox4_25.Color
+            HoverFill: =TextBox4_25.Fill
+            LineHeight: =1
+            PressedBorderColor: =TextBox4_25.BorderColor
+            PressedColor: =TextBox4_25.Color
+            PressedFill: =TextBox4_25.Fill
+            Size: =10
+            Text: =LookUp('LPA Client List', Title = ThisItem.Title, Sector)
+            Width: =187.1111111111111
+            X: =238.77777777777965
+            ZIndex: =3
+
+        TextBox4_24 As label:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            Color: =RGBA(47, 41, 43, 0.8)
+            Font: =Font.Lato
+            Height: =44
+            HoverBorderColor: =TextBox4_24.BorderColor
+            HoverColor: =TextBox4_24.Color
+            HoverFill: =TextBox4_24.Fill
+            LineHeight: =1
+            PressedBorderColor: =TextBox4_24.BorderColor
+            PressedColor: =TextBox4_24.Color
+            PressedFill: =TextBox4_24.Fill
+            Size: =10
+            Text: =ThisItem.ClientName
+            Width: =216
+            Wrap: =false
+            X: =17
+            ZIndex: =4
+
+        TextBox4_27 As label:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            Color: =RGBA(47, 41, 43, 0.8)
+            Font: =Font.Lato
+            Height: =44
+            HoverBorderColor: =TextBox4_27.BorderColor
+            HoverColor: =TextBox4_27.Color
+            HoverFill: =TextBox4_27.Fill
+            LineHeight: =1
+            PressedBorderColor: =TextBox4_27.BorderColor
+            PressedColor: =TextBox4_27.Color
+            PressedFill: =TextBox4_27.Fill
+            Size: =10
+            Text: =ThisItem.NumberofLoans
+            Width: =227.44444444444434
+            X: =729.666666666667
+            ZIndex: =5
+
+        TextBox4_28 As label:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            Color: =RGBA(47, 41, 43, 0.8)
+            Font: =Font.Lato
+            Height: =44
+            HoverBorderColor: =TextBox4_28.BorderColor
+            HoverColor: =TextBox4_28.Color
+            HoverFill: =TextBox4_28.Fill
+            LineHeight: =1
+            PressedBorderColor: =TextBox4_28.BorderColor
+            PressedColor: =TextBox4_28.Color
+            PressedFill: =TextBox4_28.Fill
+            Size: =10
+            Text: =ThisItem.CreditLimit
+            Width: =106
+            X: =898
+            Y: =0.4444444444444997
+            ZIndex: =6
+
+        Rectangle4_3 As rectangle:
+            DisabledFill: =Rectangle4_3.Fill
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =44.4444444444445
+            HoverFill: =Rectangle4_3.Fill
+            OnSelect: =Navigate(CustomerOverviewScreen,ScreenTransition.Fade)
+            PressedFill: =RGBA(216,219,228,.3)
+            TabIndex: =0
+            Width: =1019
+            ZIndex: =7
+
+        Rectangle4_4 As rectangle:
+            DisabledFill: =Rectangle4_4.Fill
+            Fill: =RGBA(230, 230, 230, 1)
+            Height: =1
+            HoverFill: =Rectangle4_4.Fill
+            PressedFill: =Rectangle4_4.Fill
+            TabIndex: =0
+            Width: =1019
+            Y: =43.4444444444445
+            ZIndex: =8
+
+    Rectangle3_3 As rectangle:
+        DisabledFill: =Rectangle3_3.Fill
+        Fill: =RGBA(216,219,228,.4)
+        Height: =47.38461538461536
+        HoverFill: =Rectangle3_3.Fill
+        PressedFill: =Rectangle3_3.Fill
+        TabIndex: =0
+        Width: =1021
+        Y: =132.61538461538464
+        ZIndex: =11
+
+    TextBox4_14 As label:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Color: =RGBA(47, 41, 43, 0.7)
+        Font: =Font.'Lato Black'
+        HoverBorderColor: =TextBox4_14.BorderColor
+        HoverColor: =TextBox4_14.Color
+        HoverFill: =TextBox4_14.Fill
+        PressedBorderColor: =TextBox4_14.BorderColor
+        PressedColor: =TextBox4_14.Color
+        PressedFill: =TextBox4_14.Fill
+        Size: =9
+        Text: ="CLIENT NAME"
+        Width: =162
+        X: =16.66666666666667
+        Y: =136
+        ZIndex: =12
+
+    TextBox4_18 As label:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Color: =RGBA(47, 41, 43, 0.7)
+        Font: =Font.'Lato Black'
+        HoverBorderColor: =TextBox4_18.BorderColor
+        HoverColor: =TextBox4_18.Color
+        HoverFill: =TextBox4_18.Fill
+        PressedBorderColor: =TextBox4_18.BorderColor
+        PressedColor: =TextBox4_18.Color
+        PressedFill: =TextBox4_18.Fill
+        Size: =9
+        Text: ="SECTOR"
+        Width: =162
+        X: =238.77777777777965
+        Y: =136
+        ZIndex: =13
+
+    TextBox4_19 As label:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Color: =RGBA(47, 41, 43, 0.7)
+        Font: =Font.'Lato Black'
+        HoverBorderColor: =TextBox4_19.BorderColor
+        HoverColor: =TextBox4_19.Color
+        HoverFill: =TextBox4_19.Fill
+        PressedBorderColor: =TextBox4_19.BorderColor
+        PressedColor: =TextBox4_19.Color
+        PressedFill: =TextBox4_19.Fill
+        Size: =9
+        Text: ="PORTFOLIO VALUE"
+        Width: =162
+        X: =434.8888888888921
+        Y: =136
+        ZIndex: =14
+
+    TextBox4_21 As label:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Color: =RGBA(47, 41, 43, 0.7)
+        Font: =Font.'Lato Black'
+        HoverBorderColor: =TextBox4_21.BorderColor
+        HoverColor: =TextBox4_21.Color
+        HoverFill: =TextBox4_21.Fill
+        PressedBorderColor: =TextBox4_21.BorderColor
+        PressedColor: =TextBox4_21.Color
+        PressedFill: =TextBox4_21.Fill
+        Size: =9
+        Text: ="CREDIT LIMIT"
+        Width: =120.77777777777237
+        X: =898
+        Y: =136
+        ZIndex: =15
+
+    TextBox4_20 As label:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Color: =RGBA(47, 41, 43, 0.7)
+        Font: =Font.'Lato Black'
+        HoverBorderColor: =TextBox4_20.BorderColor
+        HoverColor: =TextBox4_20.Color
+        HoverFill: =TextBox4_20.Fill
+        PressedBorderColor: =TextBox4_20.BorderColor
+        PressedColor: =TextBox4_20.Color
+        PressedFill: =TextBox4_20.Fill
+        Size: =9
+        Text: ="NUMBER OF LOANS"
+        Width: =162
+        X: =732.1111111111152
+        Y: =136
+        ZIndex: =16
+
+    TextBoxNoCustomer_2 As label:
+        Align: =LayoutAlignItems.Center
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Color: =RGBA(153, 153, 153, 1)
+        Font: =Font.Lato
+        Height: =29
+        HoverBorderColor: =TextBoxNoCustomer_2.BorderColor
+        HoverColor: =TextBoxNoCustomer_2.Color
+        HoverFill: =TextBoxNoCustomer_2.Fill
+        PressedBorderColor: =TextBoxNoCustomer_2.BorderColor
+        PressedColor: =TextBoxNoCustomer_2.Color
+        PressedFill: =TextBoxNoCustomer_2.Fill
+        Size: =15
+        Text: ="No customer data"
+        VerticalAlign: =VerticalAlign.Top
+        Visible: =CountRows(GalleryCustomer_1.AllItems) = 0
+        Width: =617
+        X: =201
+        Y: =444
+        ZIndex: =17
+
+    TextBox3_18 As label:
+        Align: =TextPosition.Right
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.Lato
+        Height: =21
+        HoverBorderColor: =TextBox3_18.BorderColor
+        HoverColor: =TextBox3_18.Color
+        HoverFill: =TextBox3_18.Fill
+        PressedBorderColor: =TextBox3_18.BorderColor
+        PressedColor: =TextBox3_18.Color
+        PressedFill: =TextBox3_18.Fill
+        Size: =9
+        Text: =User().FullName
+        Width: =256
+        X: =1091.6666666666665
+        Y: =84.99999999999996
+        ZIndex: =18
+
+    Rectangle3_7 As rectangle:
+        DisabledFill: =Rectangle3_7.Fill
+        Fill: =RGBA(230, 230, 230, 0.6)
+        Height: =635
+        HoverFill: =Rectangle3_7.Fill
+        PressedFill: =Rectangle3_7.Fill
+        TabIndex: =0
+        Width: =2
+        X: =1019.0769230769231
+        Y: =133
+        ZIndex: =19
+
+    GalleryEvent_1 As gallery.galleryVertical:
+        DisabledBorderColor: =GalleryEvent_1.BorderColor
+        DisabledFill: =GalleryEvent_1.Fill
+        Height: =467
+        HoverBorderColor: =GalleryEvent_1.BorderColor
+        HoverFill: =GalleryEvent_1.Fill
+        Items: ='LPA Client List'
+        Layout: =Layout.Vertical
+        PressedBorderColor: =GalleryEvent_1.BorderColor
+        PressedFill: =GalleryEvent_1.Fill
+        TemplatePadding: =0
+        TemplateSize: =76.99434800514
+        Visible: =CountRows(GalleryEvent_1.AllItems) > 0
+        Width: =345
+        X: =1021
+        Y: =208
+        ZIndex: =20
+
+        TextBox4_30 As label:
+            Align: =TextPosition.Left
+            BorderColor: =RGBA(0, 0, 0, 1)
+            Color: =RGBA(153, 153, 153, 1)
+            Font: =Font.Lato
+            Height: =27
+            HoverBorderColor: =TextBox4_30.BorderColor
+            HoverColor: =TextBox4_30.Color
+            HoverFill: =TextBox4_30.Fill
+            LineHeight: =1
+            PressedBorderColor: =TextBox4_30.BorderColor
+            PressedColor: =TextBox4_30.Color
+            PressedFill: =TextBox4_30.Fill
+            Size: =8
+            Text: =ThisItem.ClientName
+            Width: =105
+            X: =23.486649760906985
+            Y: =37
+            ZIndex: =2
+
+        TextBox4_44 As label:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            Color: =RGBA(80, 80, 80, 1)
+            Font: =Font.Lato
+            Height: =35
+            HoverBorderColor: =TextBox4_44.BorderColor
+            HoverColor: =TextBox4_44.Color
+            HoverFill: =TextBox4_44.Fill
+            LineHeight: =1
+            PressedBorderColor: =TextBox4_44.BorderColor
+            PressedColor: =TextBox4_44.Color
+            PressedFill: =TextBox4_44.Fill
+            Text: =ThisItem.Title
+            Width: =306
+            X: =23.407727954204702
+            Y: =6.065040650406502
+            ZIndex: =4
+
+        Rectangle5_4 As rectangle:
+            DisabledFill: =Rectangle5_4.Fill
+            Fill: =RGBA(204, 204, 204, 0.50196078)
+            Height: =1
+            HoverFill: =Rectangle5_4.Fill
+            PressedFill: =Rectangle5_4.Fill
+            TabIndex: =0
+            Width: =294.3998649929797
+            X: =26.348235191919627
+            Y: =75.99434800514
+            ZIndex: =5
+
+        TextBox4_45 As label:
+            Align: =TextPosition.Right
+            BorderColor: =RGBA(0, 0, 0, 1)
+            Color: =RGBA(153, 153, 153, 1)
+            Font: =Font.Lato
+            Height: =27
+            HoverBorderColor: =TextBox4_45.BorderColor
+            HoverColor: =TextBox4_45.Color
+            HoverFill: =TextBox4_45.Fill
+            LineHeight: =1
+            PaddingRight: =0
+            PressedBorderColor: =TextBox4_45.BorderColor
+            PressedColor: =TextBox4_45.Color
+            PressedFill: =TextBox4_45.Fill
+            Size: =8
+            Text: =ThisItem.PortfolioValue
+            Width: =111.33333333333344
+            X: =205.14788732394402
+            Y: =37.65658994618116
+            ZIndex: =10
+
+    TextBox4_23 As label:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Color: =RGBA(80, 80, 80, 1)
+        Font: =Font.Lato
+        Height: =40.188630490956086
+        HoverBorderColor: =TextBox4_23.BorderColor
+        HoverColor: =TextBox4_23.Color
+        HoverFill: =TextBox4_23.Fill
+        PressedBorderColor: =TextBox4_23.BorderColor
+        PressedColor: =TextBox4_23.Color
+        PressedFill: =TextBox4_23.Fill
+        Size: =20
+        Text: ="Total Portfolio Snapshot "
+        Width: =314
+        X: =1043.4310344827586
+        Y: =152.71834625323
+        ZIndex: =21
+
+    TextBoxNoEvent_2 As label:
+        Align: =LayoutAlignItems.Center
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Color: =RGBA(153, 153, 153, 1)
+        Font: =Font.Lato
+        Height: =34
+        HoverBorderColor: =TextBoxNoEvent_2.BorderColor
+        HoverColor: =TextBoxNoEvent_2.Color
+        HoverFill: =TextBoxNoEvent_2.Fill
+        PressedBorderColor: =TextBoxNoEvent_2.BorderColor
+        PressedColor: =TextBoxNoEvent_2.Color
+        PressedFill: =TextBoxNoEvent_2.Fill
+        Text: ="No events"
+        VerticalAlign: =VerticalAlign.Top
+        Visible: =CountRows(GalleryEvent_1.AllItems) = 0
+        Width: =310
+        X: =1042
+        Y: =434
+        ZIndex: =22
+
+    Button1_8 As button:
+        BorderColor: =ColorFade(Button1_8.Fill, -15%)
+        BorderThickness: =0
+        DisabledBorderColor: =ColorFade(Button1_8.BorderColor, 70%)
+        Fill: =RGBA(54, 166, 182, 1)
+        Font: =Font.Lato
+        Height: =46
+        HoverBorderColor: =ColorFade(Button1_8.BorderColor, 20%)
+        HoverColor: =Button1_8.Color
+        HoverFill: =ColorFade(Button1_8.Fill, 20%)
+        OnSelect: =ResetForm(OnboardingForm); NewForm(OnboardingForm);Navigate(OnboardClientScreen, ScreenTransition.Fade)
+        PaddingLeft: =34
+        PressedBorderColor: =Button1_8.Fill
+        PressedColor: =Button1_8.Fill
+        PressedFill: =Button1_8.Color
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Size: =13
+        Text: ="Onboard New Client"
+        Width: =300
+        X: =1043
+        Y: =414
+        ZIndex: =23
+

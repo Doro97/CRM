@@ -1,0 +1,17 @@
+[
+  {
+    "ApiId": "/providers/microsoft.powerapps/apis/shared_sharepointonline",
+    "CdpRevision": {
+      "BaseUrl": "/",
+      "LastChangedTimeString": "2022-12-15T17:53:17.6240000Z",
+      "RevisionNumber": 1
+    },
+    "ConnectedDataSourceInfoNameMapping": {},
+    "DatasetName": "https://imfactbv.sharepoint.com/teams/LPA",
+    "EncodeDataset": true,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "Name": "DummyLoanData_1",
+    "Type": "ConnectedDataSourceInfo"
+  }
+]

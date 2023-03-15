@@ -1,0 +1,224 @@
+HomePageScreen As screen:
+    Fill: =RGBA(237, 242, 246, 1)
+    Height: =Max(App.Height, App.DesignHeight)
+    OnVisible: |-
+        =UpdateContext({ResetSearch:true});
+        UpdateContext({ResetSearch:false});
+        If(IsEmpty(CustomerFeedbackList), ClearCollect(CustomerFeedbackList, CustomerFeedback));
+        If(IsEmpty(CustomerOpportunityList), ClearCollect(CustomerOpportunityList, CustomerOpportunity))
+    Width: =Max(App.Width, App.DesignWidth)
+
+    Rectangle10_1 As rectangle:
+        DisabledFill: =Rectangle10_1.Fill
+        Fill: =RGBA(216, 223, 238, 1)
+        Height: =640.4444444444445
+        HoverFill: =Rectangle10_1.Fill
+        PressedFill: =Rectangle10_1.Fill
+        TabIndex: =0
+        Width: =1366
+        Y: =128
+        ZIndex: =1
+
+    Rectangle1_16 As rectangle:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        BorderThickness: =1
+        DisabledFill: =Rectangle1_16.Fill
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =133
+        HoverFill: =Rectangle1_16.Fill
+        PressedFill: =Rectangle1_16.Fill
+        TabIndex: =0
+        Width: =1366
+        ZIndex: =2
+
+    TextBox1_3 As label:
+        Align: =Align.Right
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Color: =RGBA(9, 33, 98, 1)
+        Font: =Font.'Lato Black'
+        Height: =35
+        HoverBorderColor: =TextBox1_3.BorderColor
+        HoverColor: =TextBox1_3.Color
+        HoverFill: =TextBox1_3.Fill
+        PressedBorderColor: =TextBox1_3.BorderColor
+        PressedColor: =TextBox1_3.Color
+        PressedFill: =TextBox1_3.Fill
+        Size: =18
+        Text: ="Home"
+        VerticalAlign: =VerticalAlign.Top
+        Width: =131
+        X: =1216
+        Y: =25
+        ZIndex: =3
+
+    TextBoxNoCustomer_1 As label:
+        Align: =LayoutAlignItems.Center
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Color: =RGBA(153, 153, 153, 1)
+        Font: =Font.Lato
+        Height: =29
+        HoverBorderColor: =TextBoxNoCustomer_1.BorderColor
+        HoverColor: =TextBoxNoCustomer_1.Color
+        HoverFill: =TextBoxNoCustomer_1.Fill
+        PressedBorderColor: =TextBoxNoCustomer_1.BorderColor
+        PressedColor: =TextBoxNoCustomer_1.Color
+        PressedFill: =TextBoxNoCustomer_1.Fill
+        Size: =15
+        Text: ="No customer data"
+        VerticalAlign: =VerticalAlign.Top
+        Visible: =
+        Width: =617
+        X: =201
+        Y: =444
+        ZIndex: =4
+
+    TextBoxNoEvent_1 As label:
+        Align: =LayoutAlignItems.Center
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Color: =RGBA(153, 153, 153, 1)
+        Font: =Font.Lato
+        Height: =34
+        HoverBorderColor: =TextBoxNoEvent_1.BorderColor
+        HoverColor: =TextBoxNoEvent_1.Color
+        HoverFill: =TextBoxNoEvent_1.Fill
+        PressedBorderColor: =TextBoxNoEvent_1.BorderColor
+        PressedColor: =TextBoxNoEvent_1.Color
+        PressedFill: =TextBoxNoEvent_1.Fill
+        Text: ="No events"
+        VerticalAlign: =VerticalAlign.Top
+        Visible: =
+        Width: =310
+        X: =1042
+        Y: =434
+        ZIndex: =5
+
+    Icon1 As icon.Home:
+        BorderColor: =RGBA(255, 255, 255, 1)
+        Color: =RGBA(9, 33, 98, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =25
+        Icon: =Icon.Home
+        Width: =38
+        X: =1235
+        Y: =30
+        ZIndex: =6
+
+    HtmlText3_2 As htmlViewer:
+        Height: =280
+        HtmlText: |-
+            ="<div style='background-color: rgba(1,0,100); 
+            box-shadow: 1px 2px 1px 0px rgba(89,87,87,0.85); 
+            margin: 10px; 
+            width: 250px; 
+            height: 230px; 
+            border-radius: 30px'>
+            <div style = color:white;text-align:justify;padding-left:35px;padding-top:40px><h2>Onboard Client</h2></div>
+            </div>"
+        Width: =272
+        X: =963
+        Y: =164
+        ZIndex: =10
+
+    Button3_1 As button:
+        BorderStyle: =BorderStyle.None
+        Color: =RGBA(255, 255, 255, 1)
+        Fill: =RGBA(9, 33, 98, 1)
+        Height: =27
+        OnSelect: =Navigate(RPACustomerScreen,ScreenTransition.Fade)
+        PressedBorderColor: =RGBA(9, 33, 98, 1)
+        PressedColor: =RGBA(9, 33, 98, 1)
+        PressedFill: =RGBA(9, 33, 98, 1)
+        Text: ="View"
+        Width: =114
+        X: =583
+        Y: =341
+        ZIndex: =11
+
+    Button3_2 As button:
+        BorderStyle: =BorderStyle.None
+        Color: =RGBA(255, 255, 255, 1)
+        Fill: =RGBA(9, 33, 98, 1)
+        Height: =28
+        OnSelect: =Navigate(OnboardClientScreen,ScreenTransition.Fade)
+        PressedBorderColor: =RGBA(9, 33, 98, 1)
+        PressedColor: =RGBA(9, 33, 98, 1)
+        PressedFill: =RGBA(9, 33, 98, 1)
+        Text: ="View"
+        Width: =96
+        X: =1064
+        Y: =340
+        ZIndex: =12
+
+    Image2 As image:
+        BorderStyle: =BorderStyle.None
+        DisplayMode: =DisplayMode.View
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =85
+        Image: ='IMFACT LOGO'
+        Width: =230
+        Y: =4
+        ZIndex: =13
+
+    Rectangle1_22 As rectangle:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        BorderStyle: =BorderStyle.None
+        DisabledFill: =Rectangle1_22.Fill
+        Fill: =RGBA(9, 33, 98, 1)
+        Height: =45
+        HoverFill: =Rectangle1_22.Fill
+        PressedFill: =Rectangle1_22.Fill
+        TabIndex: =0
+        Width: =1366
+        Y: =722
+        ZIndex: =14
+
+    Rectangle1_23 As rectangle:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        BorderStyle: =BorderStyle.None
+        DisabledFill: =Rectangle1_23.Fill
+        Fill: =RGBA(9, 33, 98, 1)
+        Height: =45
+        HoverFill: =Rectangle1_23.Fill
+        PressedFill: =Rectangle1_23.Fill
+        TabIndex: =0
+        Width: =1366
+        Y: =89
+        ZIndex: =15
+
+    TextBox3_16 As label:
+        Align: =TextPosition.Right
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.Lato
+        Height: =21
+        HoverBorderColor: =TextBox3_16.BorderColor
+        HoverColor: =TextBox3_16.Color
+        HoverFill: =TextBox3_16.Fill
+        PressedBorderColor: =TextBox3_16.BorderColor
+        PressedColor: =TextBox3_16.Color
+        PressedFill: =TextBox3_16.Fill
+        Size: =9
+        Text: =User().FullName
+        Width: =256
+        X: =1096
+        Y: =97
+        ZIndex: =16
+
+    TextBox1_4 As label:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.'Lato Black'
+        Height: =32
+        HoverBorderColor: =TextBox1_4.BorderColor
+        HoverColor: =TextBox1_4.Color
+        HoverFill: =TextBox1_4.Fill
+        PressedBorderColor: =TextBox1_4.BorderColor
+        PressedColor: =TextBox1_4.Color
+        PressedFill: =TextBox1_4.Fill
+        Size: =14
+        Text: ="Receivables Management System"
+        VerticalAlign: =VerticalAlign.Top
+        Width: =393
+        Y: =95
+        ZIndex: =17
+

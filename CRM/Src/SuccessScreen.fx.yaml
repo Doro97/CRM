@@ -1,0 +1,70 @@
+"SuccessScreen As screen.'tabletLayout_Success_ver3.0'":
+
+    iconCircle1 As circle.Circle:
+        X: =Parent.Width/2 - Self.Width/2
+        Y: =(Parent.Height/2 - Self.Height/2) * .7
+        ZIndex: =1
+
+    iconCheck1 As icon.Check:
+        Height: =iconCircle1.Height
+        Icon: =Icon.Check
+        PaddingBottom: =Self.PaddingTop
+        PaddingLeft: =Self.PaddingTop
+        PaddingRight: =Self.PaddingTop
+        PaddingTop: =24
+        Width: =iconCircle1.Width
+        X: =Parent.Width/2 - Self.Width/2
+        Y: =(Parent.Height/2 - Self.Height/2) * .7
+        ZIndex: =2
+
+    LblSuccessMsg1 As label:
+        Align: =Align.Center
+        AutoHeight: =true
+        Height: =iconCircle1.Height
+        Size: =20
+        Text: ="Client Onboarding successfully completed"
+        Width: =Parent.Width * 0.75
+        X: =Parent.Width/2 - Self.Width/2
+        Y: =iconCheck1.Y + iconCheck1.Height + 100
+        ZIndex: =3
+
+    Rectangle1_14 As rectangle:
+        DisabledFill: =Rectangle1_14.Fill
+        Fill: =RGBA(0, 25, 83, 1)
+        Height: =60
+        HoverFill: =Rectangle1_14.Fill
+        PressedFill: =Rectangle1_14.Fill
+        TabIndex: =0
+        Width: =1366
+        ZIndex: =4
+
+    icon2_5 As icon.ChevronLeft:
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledFill: =icon2_5.Fill
+        Height: =38
+        HoverBorderColor: =ColorFade(icon2_5.BorderColor, 20%)
+        HoverColor: =ColorFade(icon2_5.Color, 20%)
+        HoverFill: =icon2_5.Fill
+        Icon: =Icon.ChevronLeft
+        OnSelect: =Back()
+        PressedBorderColor: =ColorFade(icon2_5.BorderColor, -20%)
+        PressedColor: =ColorFade(icon2_5.Color, -20%)
+        PressedFill: =icon2_5.Fill
+        TabIndex: =0
+        Width: =43
+        X: =24
+        Y: =11
+        ZIndex: =6
+
+    LblSuccessMsg1_1 As label:
+        Align: =Align.Center
+        AutoHeight: =true
+        Height: =iconCircle1.Height
+        Size: =20
+        Text: |-
+            ="ClientId:  " & OnboardingForm.LastSubmit.Title
+        Width: =Parent.Width * 0.75
+        X: =155
+        Y: =361
+        ZIndex: =7
+
