@@ -99,6 +99,13 @@
       "parameterHintsV2": {}
     },
     "datasets": {
+      "https://imfactbv.sharepoint.com/teams/CUSTOMERRELATIONSHIPMANAGEMENT": {
+        "dataSources": {
+          "ContactList": {
+            "tableName": "53e34c06-7df9-4b45-a931-34ce80e57a15"
+          }
+        }
+      },
       "https://imfactbv.sharepoint.com/teams/LPA": {
         "dataSources": {
           "Client Onboarding Details": {
@@ -124,7 +131,8 @@
       "Client Onboarding Details",
       "DummyLoanData",
       "DummyLoanData_1",
-      "DummyLoanData_2"
+      "DummyLoanData_2",
+      "ContactList"
     ],
     "dependencies": {},
     "dependents": [
