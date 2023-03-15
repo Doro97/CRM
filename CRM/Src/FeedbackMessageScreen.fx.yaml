@@ -36,7 +36,7 @@ FeedbackMessageScreen As screen:
         HoverBorderColor: =ColorFade(Button1_11.BorderColor, 20%)
         HoverColor: =Button1_11.Color
         HoverFill: =ColorFade(Button1_11.Fill, 20%)
-        OnSelect: =Navigate(CustomerScreen, ScreenTransition.Fade)
+        OnSelect: =Navigate(ContactScreen, ScreenTransition.Fade)
         PressedBorderColor: =Button1_11.Fill
         PressedColor: =Button1_11.Fill
         PressedFill: =Button1_11.Color

@@ -1,4 +1,4 @@
-CustomerScreen As screen:
+ContactScreen As screen:
     Fill: =RGBA(237, 242, 246, 1)
     Height: =Max(App.Height, App.DesignHeight)
     OnVisible: |-
@@ -130,7 +130,7 @@ CustomerScreen As screen:
     GalleryCustomer As gallery.galleryVertical:
         DisabledBorderColor: =GalleryCustomer.BorderColor
         DisabledFill: =GalleryCustomer.Fill
-        Height: =100
+        Height: =490
         HoverBorderColor: =GalleryCustomer.BorderColor
         HoverFill: =GalleryCustomer.Fill
         Items: =ContactList
@@ -252,7 +252,9 @@ CustomerScreen As screen:
             Fill: =RGBA(0, 0, 0, 0)
             Height: =44
             HoverFill: =Rectangle4.Fill
-            OnSelect: =Navigate(CustomerOverviewScreen,ScreenTransition.Fade)
+            OnSelect: |-
+                =Set(vRecord, ThisItem);
+                Select(Parent);Navigate(EditContactForm,ScreenTransition.Cover,{selecteditem:GalleryCustomer.Selected})
             PressedFill: =RGBA(216,219,228,.3)
             TabIndex: =0
             Width: =1161
@@ -261,7 +263,7 @@ CustomerScreen As screen:
         Icon10 As icon.Trash:
             Height: =28
             Icon: =Icon.Trash
-            OnSelect: =Select(Parent)
+            OnSelect: =Select(Parent);Remove(ContactList,ThisItem)
             Width: =26
             X: =1247
             Y: =8
@@ -270,7 +272,9 @@ CustomerScreen As screen:
         Icon11 As icon.Edit:
             Height: =28
             Icon: =Icon.Edit
-            OnSelect: =Select(Parent)
+            OnSelect: |
+                =Set(vRecord, ThisItem);
+                Select(Parent);Navigate(EditContactForm,ScreenTransition.Cover,{selecteditem:GalleryCustomer.Selected})
             Width: =26
             X: =1195
             Y: =8
@@ -413,17 +417,35 @@ CustomerScreen As screen:
         Y: =84.99999999999996
         ZIndex: =18
 
-    Icon7 As icon.Add:
-        Height: =38
-        Icon: =Icon.Add
-        Width: =61
+    Rectangle12 As rectangle:
+        Fill: =RGBA(0, 0, 0, 0)
+        Height: =45
+        OnSelect: =Navigate(AddContactForm,ScreenTransition.Cover)
+        Width: =187
         X: =1051
-        Y: =144
-        ZIndex: =19
+        Y: =142
+        ZIndex: =21
 
-    Label4 As label:
-        Text: ="Create Contact"
-        X: =1112
-        Y: =144
-        ZIndex: =20
+    Group6 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =21
+
+        Icon7 As icon.Add:
+            Height: =38
+            Icon: =Icon.Add
+            OnSelect: =Navigate(AddContactForm,ScreenTransition.Cover)
+            Width: =61
+            X: =1051
+            Y: =144
+            ZIndex: =19
+
+        Label4 As label:
+            OnSelect: =Navigate(AddContactForm,ScreenTransition.Cover)
+            Text: ="Create Contact"
+            X: =1112
+            Y: =144
+            ZIndex: =20
 

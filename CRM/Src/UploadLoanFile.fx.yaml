@@ -172,7 +172,7 @@ UploadLoanFile As screen:
             Fill: =RGBA(0, 25, 83, 1)
             Height: =60
             HoverFill: =Rectangle1_21.Fill
-            OnSelect: =Navigate(CustomerScreen, ScreenTransition.Fade)
+            OnSelect: =Navigate(ContactScreen, ScreenTransition.Fade)
             PressedFill: =Rectangle1_21.Fill
             TabIndex: =0
             Width: =60

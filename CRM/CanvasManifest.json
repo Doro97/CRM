@@ -119,7 +119,9 @@
   },
   "ScreenOrder": [
     "HomePageScreen",
-    "CustomerScreen",
+    "ContactScreen",
+    "EditContactForm",
+    "AddContactForm",
     "RPACustomerScreen",
     "CustomerOverviewScreen",
     "CustomerDocumentScreen",

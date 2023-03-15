@@ -51,47 +51,6 @@ HomePageScreen As screen:
         Y: =25
         ZIndex: =3
 
-    TextBoxNoCustomer_1 As label:
-        Align: =LayoutAlignItems.Center
-        BorderColor: =RGBA(0, 0, 0, 1)
-        Color: =RGBA(153, 153, 153, 1)
-        Font: =Font.Lato
-        Height: =29
-        HoverBorderColor: =TextBoxNoCustomer_1.BorderColor
-        HoverColor: =TextBoxNoCustomer_1.Color
-        HoverFill: =TextBoxNoCustomer_1.Fill
-        PressedBorderColor: =TextBoxNoCustomer_1.BorderColor
-        PressedColor: =TextBoxNoCustomer_1.Color
-        PressedFill: =TextBoxNoCustomer_1.Fill
-        Size: =15
-        Text: ="No customer data"
-        VerticalAlign: =VerticalAlign.Top
-        Visible: =
-        Width: =617
-        X: =201
-        Y: =444
-        ZIndex: =4
-
-    TextBoxNoEvent_1 As label:
-        Align: =LayoutAlignItems.Center
-        BorderColor: =RGBA(0, 0, 0, 1)
-        Color: =RGBA(153, 153, 153, 1)
-        Font: =Font.Lato
-        Height: =34
-        HoverBorderColor: =TextBoxNoEvent_1.BorderColor
-        HoverColor: =TextBoxNoEvent_1.Color
-        HoverFill: =TextBoxNoEvent_1.Fill
-        PressedBorderColor: =TextBoxNoEvent_1.BorderColor
-        PressedColor: =TextBoxNoEvent_1.Color
-        PressedFill: =TextBoxNoEvent_1.Fill
-        Text: ="No events"
-        VerticalAlign: =VerticalAlign.Top
-        Visible: =
-        Width: =310
-        X: =1042
-        Y: =434
-        ZIndex: =5
-
     Icon1 As icon.Home:
         BorderColor: =RGBA(255, 255, 255, 1)
         Color: =RGBA(9, 33, 98, 1)
@@ -173,30 +132,31 @@ HomePageScreen As screen:
         Text: ="Customer Relationship Management System"
         VerticalAlign: =VerticalAlign.Top
         Width: =393
-        Y: =95
+        Y: =92
         ZIndex: =17
 
-    Rectangle11 As rectangle:
-        Fill: =RGBA(0, 0, 0, 0)
-        Height: =40
-        OnSelect: =Navigate(HomePageScreen,ScreenTransition.Fade)
-        X: =380
-        Y: =241
-        ZIndex: =27
+    Rectangle8 As rectangle:
+        Fill: =RGBA(193, 204, 228, 1)
+        Height: =588
+        Width: =267
+        Y: =134
+        ZIndex: =18
 
-    Group5 As group:
+    Rectangle13 As rectangle:
+        Fill: =RGBA(0, 0, 0, 0)
+        Height: =49
+        OnSelect: =Navigate(HomePageScreen,ScreenTransition.Fade)
+        Width: =214
+        X: =16
+        Y: =159
+        ZIndex: =28
+
+    Group12 As group:
         Height: =5
         Width: =5
         X: =40
         Y: =40
         ZIndex: =28
-
-        Rectangle8 As rectangle:
-            Fill: =RGBA(193, 204, 228, 1)
-            Height: =588
-            Width: =267
-            Y: =134
-            ZIndex: =18
 
         Icon3 As icon.Home:
             BorderColor: =RGBA(0, 0, 0, 1)
@@ -225,7 +185,7 @@ HomePageScreen As screen:
             Color: =RGBA(56, 86, 153, 1)
             Height: =40
             Icon: =Icon.Mobile
-            OnSelect: =Navigate(CustomerScreen,ScreenTransition.Fade)
+            OnSelect: =Navigate(ContactScreen,ScreenTransition.Fade)
             Width: =40
             X: =16
             Y: =287
@@ -256,7 +216,7 @@ HomePageScreen As screen:
             ZIndex: =24
 
         Label3_2 As label:
-            OnSelect: =Navigate(CustomerScreen,ScreenTransition.Fade)
+            OnSelect: =Navigate(ContactScreen,ScreenTransition.Fade)
             Text: ="Contacts"
             X: =80
             Y: =296
@@ -268,4 +228,31 @@ HomePageScreen As screen:
             X: =80
             Y: =356
             ZIndex: =26
+
+    Rectangle13_1 As rectangle:
+        Fill: =RGBA(0, 0, 0, 0)
+        Height: =49
+        OnSelect: =Navigate(DashboardScreen,ScreenTransition.Fade)
+        Width: =214
+        X: =16
+        Y: =215
+        ZIndex: =29
+
+    Rectangle13_2 As rectangle:
+        Fill: =RGBA(0, 0, 0, 0)
+        Height: =49
+        OnSelect: =Navigate(ContactScreen,ScreenTransition.Fade)
+        Width: =214
+        X: =16
+        Y: =281
+        ZIndex: =30
+
+    Rectangle13_3 As rectangle:
+        Fill: =RGBA(0, 0, 0, 0)
+        Height: =49
+        OnSelect: =Navigate(DealsScreen,ScreenTransition.Fade)
+        Width: =214
+        X: =16
+        Y: =356
+        ZIndex: =31
 
