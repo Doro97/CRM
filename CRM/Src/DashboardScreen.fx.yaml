@@ -1,0 +1,179 @@
+DashboardScreen As screen:
+    Fill: =RGBA(237, 242, 246, 1)
+    Height: =Max(App.Height, App.DesignHeight)
+    OnVisible: |-
+        =UpdateContext({ResetSearch:true});
+        UpdateContext({ResetSearch:false});
+        If(IsEmpty(CustomerFeedbackList), ClearCollect(CustomerFeedbackList, CustomerFeedback));
+        If(IsEmpty(CustomerOpportunityList), ClearCollect(CustomerOpportunityList, CustomerOpportunity))
+    Width: =Max(App.Width, App.DesignWidth)
+
+    Rectangle10_2 As rectangle:
+        DisabledFill: =Rectangle10_2.Fill
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =641
+        HoverFill: =Rectangle10_2.Fill
+        PressedFill: =Rectangle10_2.Fill
+        TabIndex: =0
+        Width: =1366
+        Y: =127
+        ZIndex: =2
+
+    Rectangle1_19 As rectangle:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        BorderStyle: =BorderStyle.None
+        DisabledFill: =Rectangle1_19.Fill
+        Fill: =RGBA(9, 33, 98, 1)
+        Height: =133
+        HoverFill: =Rectangle1_19.Fill
+        PressedFill: =Rectangle1_19.Fill
+        TabIndex: =0
+        Width: =1366
+        ZIndex: =3
+
+    Image1_1 As image:
+        ApplyEXIFOrientation: =false
+        Height: =17.1
+        HoverBorderColor: =ColorFade(Image1_1.BorderColor, 20%)
+        HoverFill: =ColorFade(Image1_1.Fill, 20%)
+        Image: =home
+        OnSelect: =Navigate(HomePageScreen)
+        PressedBorderColor: =ColorFade(Image1_1.BorderColor, -20%)
+        PressedFill: =ColorFade(Image1_1.Fill, -20%)
+        TabIndex: =0
+        Width: =20.5
+        X: =20
+        Y: =21.5
+        ZIndex: =4
+
+    TextBox1_1 As label:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.Lato
+        FontWeight: =FontWeight.Semibold
+        Height: =29
+        HoverBorderColor: =TextBox1_1.BorderColor
+        HoverColor: =TextBox1_1.Color
+        HoverFill: =TextBox1_1.Fill
+        PressedBorderColor: =TextBox1_1.BorderColor
+        PressedColor: =TextBox1_1.Color
+        PressedFill: =TextBox1_1.Fill
+        Size: =15
+        Text: =""
+        VerticalAlign: =VerticalAlign.Top
+        Width: =617
+        X: =53
+        Y: =14
+        ZIndex: =5
+
+    TextBox1_5 As label:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.'Lato Black'
+        Height: =35
+        HoverBorderColor: =TextBox1_5.BorderColor
+        HoverColor: =TextBox1_5.Color
+        HoverFill: =TextBox1_5.Fill
+        PressedBorderColor: =TextBox1_5.BorderColor
+        PressedColor: =TextBox1_5.Color
+        PressedFill: =TextBox1_5.Fill
+        Size: =18
+        Text: ="Dashboard"
+        VerticalAlign: =VerticalAlign.Top
+        Width: =131
+        X: =1216
+        Y: =21
+        ZIndex: =7
+
+    TextInputSearch_1 As text:
+        BorderColor: =RGBA(163,171,193,1)
+        Color: =RGBA(255, 255, 255, 1)
+        Default: =""
+        Fill: =RGBA(0, 0, 0, 0)
+        Font: =Font.Lato
+        HintText: ="Search Client"
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(190, 202, 226, 0), 30%)
+        PressedBorderColor: =TextInputSearch_1.HoverBorderColor
+        PressedColor: =TextInputSearch_1.Color
+        PressedFill: =TextInputSearch_1.Fill
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Reset: =ResetSearch
+        Size: =10
+        Width: =348
+        X: =20
+        Y: =70
+        ZIndex: =8
+
+    iconSearch_1 As icon.Search:
+        Color: =RGBA(163,171,193,1)
+        DisabledFill: =iconSearch_1.Fill
+        Height: =20
+        HoverBorderColor: =ColorFade(iconSearch_1.BorderColor, 20%)
+        HoverColor: =ColorFade(iconSearch_1.Color, 20%)
+        HoverFill: =iconSearch_1.Fill
+        Icon: =Icon.Search
+        PressedBorderColor: =ColorFade(iconSearch_1.BorderColor, -20%)
+        PressedColor: =ColorFade(iconSearch_1.Color, -20%)
+        PressedFill: =iconSearch_1.Fill
+        TabIndex: =0
+        Width: =20
+        X: =340.7777777777778
+        Y: =79.66666666666666
+        ZIndex: =9
+
+    TextBox3_18 As label:
+        Align: =TextPosition.Right
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.Lato
+        Height: =21
+        HoverBorderColor: =TextBox3_18.BorderColor
+        HoverColor: =TextBox3_18.Color
+        HoverFill: =TextBox3_18.Fill
+        PressedBorderColor: =TextBox3_18.BorderColor
+        PressedColor: =TextBox3_18.Color
+        PressedFill: =TextBox3_18.Fill
+        Size: =9
+        Text: =User().FullName
+        Width: =256
+        X: =1091.6666666666665
+        Y: =84.99999999999996
+        ZIndex: =18
+
+    CompositeColumnChart1 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =19
+
+        Title1 As label:
+            Align: =Align.Center
+            Height: =24
+            Text: ="Chart Title"
+            Width: =634
+            X: =40
+            Y: =233
+            ZIndex: =20
+
+        ColumnChart1 As barChart:
+            Height: =342
+            Items: =ColumnChartSample
+            Width: =686
+            X: =40
+            Y: =233
+            ZIndex: =21
+
+        Legend1 As legend:
+            Height: =76
+            ItemColorSet: =ColumnChart1.ItemColorSet
+            Items: =ColumnChart1.SeriesLabels
+            Width: =507
+            X: =103
+            Y: =233
+            ZIndex: =22
+

@@ -122,7 +122,7 @@
     "ContactScreen",
     "EditContactForm",
     "AddContactForm",
-    "RPACustomerScreen",
+    "DashboardScreen",
     "CustomerOverviewScreen",
     "CustomerDocumentScreen",
     "UploadLoanFile",
