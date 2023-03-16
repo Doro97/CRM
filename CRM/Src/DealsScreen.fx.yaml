@@ -35,8 +35,7 @@
         PressedFill: =Rectangle1_3.Fill
         TabIndex: =0
         Width: =1349
-        X: =8
-        Y: =67.27500406901038
+        Y: =64
         ZIndex: =10
 
     GalleryWorkOrder As gallery.galleryVertical:
@@ -464,7 +463,7 @@
         RadiusTopLeft: =0
         RadiusTopRight: =0
         Size: =13
-        Text: ="Upload Payments File"
+        Text: ="View Deals"
         Width: =300
         X: =708
         Y: =712
@@ -490,49 +489,53 @@
         RadiusTopLeft: =0
         RadiusTopRight: =0
         Size: =13
-        Text: ="Upload Loan File"
+        Text: ="Meetings"
         Width: =300
         X: =370
         Y: =712
         ZIndex: =78
 
     "Gallery1 As gallery.'BrowseLayout_Horizontal_TwoTextOneImageVariant_ver4.0'":
+        BorderThickness: =2
         DelayItemLoading: =true
-        Height: =327
+        Height: =188
         Items: =DEALSTAGES
         LoadingSpinner: =LoadingSpinner.Data
         TemplatePadding: =0
-        TemplateSize: =Min(440, Self.Height - 60)
-        Width: =1317
-        X: =30
-        Y: =290
+        TemplateSize: =171
+        Width: =1229
+        X: =64
+        Y: =220
         ZIndex: =79
 
         Title2 As label:
-            Height: =114
+            FontWeight: =FontWeight.Normal
+            Height: =75
             OnSelect: =Select(Parent)
             PaddingBottom: =0
             PaddingLeft: =0
             PaddingRight: =0
             PaddingTop: =0
+            Size: =10
             Text: =ThisItem.Title
             VerticalAlign: =VerticalAlign.Top
-            Width: =205
-            X: =32
-            Y: =
+            Width: =124
+            X: =20
+            Y: =20
             ZIndex: =2
 
     Icon8 As icon.Add:
         Height: =26
         Icon: =Icon.Add
-        Width: =19
-        X: =41
-        Y: =127
+        Width: =23
+        X: =1139
+        Y: =89
         ZIndex: =80
 
     Label5 As label:
-        Text: ="Add Pipeline Stage"
-        X: =68
-        Y: =120
+        Text: ="Create Deal"
+        Width: =181
+        X: =1166
+        Y: =82
         ZIndex: =81
 

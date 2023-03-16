@@ -122,6 +122,7 @@
     "ContactScreen",
     "EditContactForm",
     "AddContactForm",
+    "AddContactForm_1",
     "DashboardScreen",
     "DealsScreen",
     "CustomerDocumentScreen",

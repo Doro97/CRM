@@ -1,4 +1,4 @@
-AddContactForm As screen:
+AddContactForm_1 As screen:
     Fill: =RGBA(237, 242, 246, 1)
     Height: =Max(App.Height, App.DesignHeight)
     OnVisible: |-
@@ -8,55 +8,55 @@ AddContactForm As screen:
         If(IsEmpty(CustomerOpportunityList), ClearCollect(CustomerOpportunityList, CustomerOpportunity))
     Width: =Max(App.Width, App.DesignWidth)
 
-    Rectangle10_4 As rectangle:
-        DisabledFill: =Rectangle10_4.Fill
+    Rectangle10_5 As rectangle:
+        DisabledFill: =Rectangle10_5.Fill
         Fill: =RGBA(255, 255, 255, 1)
         Height: =640
-        HoverFill: =Rectangle10_4.Fill
-        PressedFill: =Rectangle10_4.Fill
+        HoverFill: =Rectangle10_5.Fill
+        PressedFill: =Rectangle10_5.Fill
         TabIndex: =0
         Width: =1366
         Y: =128
         ZIndex: =2
 
-    Rectangle1_17 As rectangle:
+    Rectangle1_18 As rectangle:
         BorderColor: =RGBA(0, 0, 0, 1)
         BorderStyle: =BorderStyle.None
-        DisabledFill: =Rectangle1_17.Fill
+        DisabledFill: =Rectangle1_18.Fill
         Fill: =RGBA(9, 33, 98, 1)
         Height: =133
-        HoverFill: =Rectangle1_17.Fill
-        PressedFill: =Rectangle1_17.Fill
+        HoverFill: =Rectangle1_18.Fill
+        PressedFill: =Rectangle1_18.Fill
         TabIndex: =0
         Width: =1366
         ZIndex: =3
 
-    Image1_3 As image:
+    Image1_4 As image:
         ApplyEXIFOrientation: =false
         Height: =30
-        HoverBorderColor: =ColorFade(Image1_3.BorderColor, 20%)
-        HoverFill: =ColorFade(Image1_3.Fill, 20%)
+        HoverBorderColor: =ColorFade(Image1_4.BorderColor, 20%)
+        HoverFill: =ColorFade(Image1_4.Fill, 20%)
         Image: =home
         OnSelect: =Navigate(HomePageScreen)
-        PressedBorderColor: =ColorFade(Image1_3.BorderColor, -20%)
-        PressedFill: =ColorFade(Image1_3.Fill, -20%)
+        PressedBorderColor: =ColorFade(Image1_4.BorderColor, -20%)
+        PressedFill: =ColorFade(Image1_4.Fill, -20%)
         TabIndex: =0
         Width: =30
         X: =1317
         Y: =12
         ZIndex: =4
 
-    TextBox1_8 As label:
+    TextBox1_9 As label:
         BorderColor: =RGBA(0, 0, 0, 1)
         Color: =RGBA(255, 255, 255, 1)
         Font: =Font.'Lato Black'
         Height: =37
-        HoverBorderColor: =TextBox1_8.BorderColor
-        HoverColor: =TextBox1_8.Color
-        HoverFill: =TextBox1_8.Fill
-        PressedBorderColor: =TextBox1_8.BorderColor
-        PressedColor: =TextBox1_8.Color
-        PressedFill: =TextBox1_8.Fill
+        HoverBorderColor: =TextBox1_9.BorderColor
+        HoverColor: =TextBox1_9.Color
+        HoverFill: =TextBox1_9.Fill
+        PressedBorderColor: =TextBox1_9.BorderColor
+        PressedColor: =TextBox1_9.Color
+        PressedFill: =TextBox1_9.Fill
         Size: =18
         Text: |-
             ="Contact Form
@@ -67,18 +67,18 @@ AddContactForm As screen:
         Y: =42
         ZIndex: =7
 
-    TextBox3_21 As label:
+    TextBox3_22 As label:
         Align: =TextPosition.Right
         BorderColor: =RGBA(0, 0, 0, 1)
         Color: =RGBA(255, 255, 255, 1)
         Font: =Font.Lato
         Height: =21
-        HoverBorderColor: =TextBox3_21.BorderColor
-        HoverColor: =TextBox3_21.Color
-        HoverFill: =TextBox3_21.Fill
-        PressedBorderColor: =TextBox3_21.BorderColor
-        PressedColor: =TextBox3_21.Color
-        PressedFill: =TextBox3_21.Fill
+        HoverBorderColor: =TextBox3_22.BorderColor
+        HoverColor: =TextBox3_22.Color
+        HoverFill: =TextBox3_22.Fill
+        PressedBorderColor: =TextBox3_22.BorderColor
+        PressedColor: =TextBox3_22.Color
+        PressedFill: =TextBox3_22.Fill
         Size: =9
         Text: =User().FullName
         Width: =256
@@ -86,7 +86,7 @@ AddContactForm As screen:
         Y: =84.99999999999996
         ZIndex: =18
 
-    Form1_1 As form:
+    Form1_2 As form:
         DataSource: =ContactList
         DefaultMode: =FormMode.New
         Height: =290
@@ -95,7 +95,7 @@ AddContactForm As screen:
         Y: =230
         ZIndex: =19
 
-        Modified_DataCard1_1 As typedDataCard.textualViewCard:
+        Modified_DataCard1_2 As typedDataCard.textualViewCard:
             BorderStyle: =BorderStyle.Solid
             DataField: ="Modified"
             Default: =ThisItem.Modified
@@ -109,7 +109,7 @@ AddContactForm As screen:
             Y: =2
             ZIndex: =1
 
-            DataCardKey13_1 As label:
+            DataCardKey13_2 As label:
                 AutoHeight: =true
                 Height: =34
                 PaddingBottom: =0
@@ -123,7 +123,7 @@ AddContactForm As screen:
                 Y: =10
                 ZIndex: =1
 
-            DataCardValue13_1 As label:
+            DataCardValue13_2 As label:
                 AutoHeight: =true
                 DisplayMode: =Parent.DisplayMode
                 Height: =27
@@ -133,10 +133,10 @@ AddContactForm As screen:
                 Text: =Parent.Default
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardKey13_1.Y + DataCardKey13_1.Height + 5
+                Y: =DataCardKey13_2.Y + DataCardKey13_2.Height + 5
                 ZIndex: =2
 
-        "'Modified By_DataCard1_1' As typedDataCard.comboBoxViewCard":
+        "'Modified By_DataCard1_2' As typedDataCard.comboBoxViewCard":
             BorderStyle: =BorderStyle.Solid
             DataField: ="Editor"
             Default: =ThisItem.Editor
@@ -145,13 +145,13 @@ AddContactForm As screen:
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
             Required: =false
-            Update: =DataCardValue14_1.Selected
+            Update: =DataCardValue14_2.Selected
             Width: =370
             X: =1
             Y: =2
             ZIndex: =1
 
-            DataCardKey14_1 As label:
+            DataCardKey14_2 As label:
                 AutoHeight: =true
                 Height: =34
                 PaddingBottom: =0
@@ -165,7 +165,7 @@ AddContactForm As screen:
                 Y: =10
                 ZIndex: =1
 
-            DataCardValue14_1 As combobox:
+            DataCardValue14_2 As combobox:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 DefaultSelectedItems: =Parent.Default
                 DisplayFields: =["DisplayName","Email","Picture"]
@@ -173,15 +173,15 @@ AddContactForm As screen:
                 Items: =Choices([@ContactList].Editor)
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 SearchFields: =["DisplayName"]
-                SearchItems: =Choices(ContactList.Editor,DataCardValue14_1.SearchText)
+                SearchItems: =Choices(ContactList.Editor,DataCardValue14_2.SearchText)
                 SelectMultiple: =false
                 Template: =ListItemTemplate.Person
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardKey14_1.Y + DataCardKey14_1.Height + 5
+                Y: =DataCardKey14_2.Y + DataCardKey14_2.Height + 5
                 ZIndex: =2
 
-            ErrorMessage13_1 As label:
+            ErrorMessage13_2 As label:
                 AutoHeight: =true
                 Height: =10
                 Live: =Live.Assertive
@@ -194,24 +194,24 @@ AddContactForm As screen:
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardValue14_1.Y + DataCardValue14_1.Height
+                Y: =DataCardValue14_2.Y + DataCardValue14_2.Height
                 ZIndex: =3
 
-            StarVisible13_1 As label:
+            StarVisible13_2 As label:
                 Align: =Align.Center
-                Height: =DataCardKey14_1.Height
-                PaddingBottom: =DataCardKey14_1.PaddingBottom
-                PaddingLeft: =DataCardKey14_1.PaddingLeft
-                PaddingRight: =DataCardKey14_1.PaddingRight
-                PaddingTop: =DataCardKey14_1.PaddingTop
+                Height: =DataCardKey14_2.Height
+                PaddingBottom: =DataCardKey14_2.PaddingBottom
+                PaddingLeft: =DataCardKey14_2.PaddingLeft
+                PaddingRight: =DataCardKey14_2.PaddingRight
+                PaddingTop: =DataCardKey14_2.PaddingTop
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =DataCardKey14_1.Y
+                Y: =DataCardKey14_2.Y
                 ZIndex: =4
 
-        Title_DataCard2_1 As typedDataCard.textualEditCard:
+        Title_DataCard2_2 As typedDataCard.textualEditCard:
             BorderStyle: =BorderStyle.Solid
             DataField: ="Title"
             Default: =ThisItem.Title
@@ -221,13 +221,13 @@ AddContactForm As screen:
             Height: =50
             MaxLength: =DataSourceInfo([@ContactList], DataSourceInfo.MaxLength, "Title")
             Required: =true
-            Update: =DataCardValue6_1.Text
+            Update: =DataCardValue6_2.Text
             Width: =370
             X: =0
             Y: =0
             ZIndex: =20
 
-            DataCardKey6_1 As label:
+            DataCardKey6_2 As label:
                 AutoHeight: =true
                 Height: =34
                 PaddingBottom: =0
@@ -241,7 +241,7 @@ AddContactForm As screen:
                 Y: =10
                 ZIndex: =1
 
-            DataCardValue6_1 As text:
+            DataCardValue6_2 As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 Default: =Parent.Default
                 DelayOutput: =true
@@ -255,10 +255,10 @@ AddContactForm As screen:
                 Tooltip: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardKey6_1.Y + DataCardKey6_1.Height + 5
+                Y: =DataCardKey6_2.Y + DataCardKey6_2.Height + 5
                 ZIndex: =2
 
-            ErrorMessage6_1 As label:
+            ErrorMessage6_2 As label:
                 AutoHeight: =true
                 Height: =10
                 Live: =Live.Assertive
@@ -271,24 +271,24 @@ AddContactForm As screen:
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardValue6_1.Y + DataCardValue6_1.Height
+                Y: =DataCardValue6_2.Y + DataCardValue6_2.Height
                 ZIndex: =3
 
-            StarVisible6_1 As label:
+            StarVisible6_2 As label:
                 Align: =Align.Center
-                Height: =DataCardKey6_1.Height
-                PaddingBottom: =DataCardKey6_1.PaddingBottom
-                PaddingLeft: =DataCardKey6_1.PaddingLeft
-                PaddingRight: =DataCardKey6_1.PaddingRight
-                PaddingTop: =DataCardKey6_1.PaddingTop
+                Height: =DataCardKey6_2.Height
+                PaddingBottom: =DataCardKey6_2.PaddingBottom
+                PaddingLeft: =DataCardKey6_2.PaddingLeft
+                PaddingRight: =DataCardKey6_2.PaddingRight
+                PaddingTop: =DataCardKey6_2.PaddingTop
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =DataCardKey6_1.Y
+                Y: =DataCardKey6_2.Y
                 ZIndex: =4
 
-        Name_DataCard1_1 As typedDataCard.textualEditCard:
+        Name_DataCard1_2 As typedDataCard.textualEditCard:
             BorderStyle: =BorderStyle.Solid
             DataField: ="Name"
             Default: =ThisItem.Name
@@ -298,13 +298,13 @@ AddContactForm As screen:
             Height: =50
             MaxLength: =DataSourceInfo([@ContactList], DataSourceInfo.MaxLength, "Name")
             Required: =false
-            Update: =DataCardValue7_1.Text
+            Update: =DataCardValue7_2.Text
             Width: =370
             X: =1
             Y: =0
             ZIndex: =20
 
-            DataCardKey7_1 As label:
+            DataCardKey7_2 As label:
                 AutoHeight: =true
                 Height: =34
                 PaddingBottom: =0
@@ -318,7 +318,7 @@ AddContactForm As screen:
                 Y: =10
                 ZIndex: =1
 
-            DataCardValue7_1 As text:
+            DataCardValue7_2 As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 Default: =Parent.Default
                 DelayOutput: =true
@@ -332,10 +332,10 @@ AddContactForm As screen:
                 Tooltip: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardKey7_1.Y + DataCardKey7_1.Height + 5
+                Y: =DataCardKey7_2.Y + DataCardKey7_2.Height + 5
                 ZIndex: =2
 
-            ErrorMessage7_1 As label:
+            ErrorMessage7_2 As label:
                 AutoHeight: =true
                 Height: =10
                 Live: =Live.Assertive
@@ -348,24 +348,24 @@ AddContactForm As screen:
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardValue7_1.Y + DataCardValue7_1.Height
+                Y: =DataCardValue7_2.Y + DataCardValue7_2.Height
                 ZIndex: =3
 
-            StarVisible7_1 As label:
+            StarVisible7_2 As label:
                 Align: =Align.Center
-                Height: =DataCardKey7_1.Height
-                PaddingBottom: =DataCardKey7_1.PaddingBottom
-                PaddingLeft: =DataCardKey7_1.PaddingLeft
-                PaddingRight: =DataCardKey7_1.PaddingRight
-                PaddingTop: =DataCardKey7_1.PaddingTop
+                Height: =DataCardKey7_2.Height
+                PaddingBottom: =DataCardKey7_2.PaddingBottom
+                PaddingLeft: =DataCardKey7_2.PaddingLeft
+                PaddingRight: =DataCardKey7_2.PaddingRight
+                PaddingTop: =DataCardKey7_2.PaddingTop
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =DataCardKey7_1.Y
+                Y: =DataCardKey7_2.Y
                 ZIndex: =4
 
-        Email_DataCard1_1 As typedDataCard.textualEditCard:
+        Email_DataCard1_2 As typedDataCard.textualEditCard:
             BorderStyle: =BorderStyle.Solid
             DataField: ="Email"
             Default: =ThisItem.Email
@@ -375,13 +375,13 @@ AddContactForm As screen:
             Height: =50
             MaxLength: =DataSourceInfo([@ContactList], DataSourceInfo.MaxLength, "Email")
             Required: =false
-            Update: =DataCardValue8_1.Text
+            Update: =DataCardValue8_2.Text
             Width: =370
             X: =2
             Y: =0
             ZIndex: =20
 
-            DataCardKey8_1 As label:
+            DataCardKey8_2 As label:
                 AutoHeight: =true
                 Height: =34
                 PaddingBottom: =0
@@ -395,7 +395,7 @@ AddContactForm As screen:
                 Y: =10
                 ZIndex: =1
 
-            DataCardValue8_1 As text:
+            DataCardValue8_2 As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 Default: =Parent.Default
                 DelayOutput: =true
@@ -409,10 +409,10 @@ AddContactForm As screen:
                 Tooltip: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardKey8_1.Y + DataCardKey8_1.Height + 5
+                Y: =DataCardKey8_2.Y + DataCardKey8_2.Height + 5
                 ZIndex: =2
 
-            ErrorMessage8_1 As label:
+            ErrorMessage8_2 As label:
                 AutoHeight: =true
                 Height: =10
                 Live: =Live.Assertive
@@ -425,24 +425,24 @@ AddContactForm As screen:
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardValue8_1.Y + DataCardValue8_1.Height
+                Y: =DataCardValue8_2.Y + DataCardValue8_2.Height
                 ZIndex: =3
 
-            StarVisible8_1 As label:
+            StarVisible8_2 As label:
                 Align: =Align.Center
-                Height: =DataCardKey8_1.Height
-                PaddingBottom: =DataCardKey8_1.PaddingBottom
-                PaddingLeft: =DataCardKey8_1.PaddingLeft
-                PaddingRight: =DataCardKey8_1.PaddingRight
-                PaddingTop: =DataCardKey8_1.PaddingTop
+                Height: =DataCardKey8_2.Height
+                PaddingBottom: =DataCardKey8_2.PaddingBottom
+                PaddingLeft: =DataCardKey8_2.PaddingLeft
+                PaddingRight: =DataCardKey8_2.PaddingRight
+                PaddingTop: =DataCardKey8_2.PaddingTop
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =DataCardKey8_1.Y
+                Y: =DataCardKey8_2.Y
                 ZIndex: =4
 
-        Company_DataCard1_1 As typedDataCard.textualEditCard:
+        Company_DataCard1_2 As typedDataCard.textualEditCard:
             BorderStyle: =BorderStyle.Solid
             DataField: ="Company"
             Default: =ThisItem.Company
@@ -452,13 +452,13 @@ AddContactForm As screen:
             Height: =50
             MaxLength: =DataSourceInfo([@ContactList], DataSourceInfo.MaxLength, "Company")
             Required: =false
-            Update: =DataCardValue9_1.Text
+            Update: =DataCardValue9_2.Text
             Width: =370
             X: =0
             Y: =1
             ZIndex: =20
 
-            DataCardKey9_1 As label:
+            DataCardKey9_2 As label:
                 AutoHeight: =true
                 Height: =34
                 PaddingBottom: =0
@@ -472,7 +472,7 @@ AddContactForm As screen:
                 Y: =10
                 ZIndex: =1
 
-            DataCardValue9_1 As text:
+            DataCardValue9_2 As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 Default: =Parent.Default
                 DelayOutput: =true
@@ -486,10 +486,10 @@ AddContactForm As screen:
                 Tooltip: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardKey9_1.Y + DataCardKey9_1.Height + 5
+                Y: =DataCardKey9_2.Y + DataCardKey9_2.Height + 5
                 ZIndex: =2
 
-            ErrorMessage9_1 As label:
+            ErrorMessage9_2 As label:
                 AutoHeight: =true
                 Height: =10
                 Live: =Live.Assertive
@@ -502,24 +502,24 @@ AddContactForm As screen:
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardValue9_1.Y + DataCardValue9_1.Height
+                Y: =DataCardValue9_2.Y + DataCardValue9_2.Height
                 ZIndex: =3
 
-            StarVisible9_1 As label:
+            StarVisible9_2 As label:
                 Align: =Align.Center
-                Height: =DataCardKey9_1.Height
-                PaddingBottom: =DataCardKey9_1.PaddingBottom
-                PaddingLeft: =DataCardKey9_1.PaddingLeft
-                PaddingRight: =DataCardKey9_1.PaddingRight
-                PaddingTop: =DataCardKey9_1.PaddingTop
+                Height: =DataCardKey9_2.Height
+                PaddingBottom: =DataCardKey9_2.PaddingBottom
+                PaddingLeft: =DataCardKey9_2.PaddingLeft
+                PaddingRight: =DataCardKey9_2.PaddingRight
+                PaddingTop: =DataCardKey9_2.PaddingTop
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =DataCardKey9_1.Y
+                Y: =DataCardKey9_2.Y
                 ZIndex: =4
 
-        "'Contact Owner_DataCard1_1' As typedDataCard.textualEditCard":
+        "'Contact Owner_DataCard1_2' As typedDataCard.textualEditCard":
             BorderStyle: =BorderStyle.Solid
             DataField: ="ContactOwner"
             Default: =ThisItem.ContactOwner
@@ -529,13 +529,13 @@ AddContactForm As screen:
             Height: =50
             MaxLength: =DataSourceInfo([@ContactList], DataSourceInfo.MaxLength, "ContactOwner")
             Required: =false
-            Update: =DataCardValue10_1.Text
+            Update: =DataCardValue10_2.Text
             Width: =370
             X: =1
             Y: =1
             ZIndex: =20
 
-            DataCardKey10_1 As label:
+            DataCardKey10_2 As label:
                 AutoHeight: =true
                 Height: =34
                 PaddingBottom: =0
@@ -549,7 +549,7 @@ AddContactForm As screen:
                 Y: =10
                 ZIndex: =1
 
-            DataCardValue10_1 As text:
+            DataCardValue10_2 As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 Default: =Parent.Default
                 DelayOutput: =true
@@ -563,10 +563,10 @@ AddContactForm As screen:
                 Tooltip: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardKey10_1.Y + DataCardKey10_1.Height + 5
+                Y: =DataCardKey10_2.Y + DataCardKey10_2.Height + 5
                 ZIndex: =2
 
-            ErrorMessage10_1 As label:
+            ErrorMessage10_2 As label:
                 AutoHeight: =true
                 Height: =10
                 Live: =Live.Assertive
@@ -579,24 +579,24 @@ AddContactForm As screen:
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardValue10_1.Y + DataCardValue10_1.Height
+                Y: =DataCardValue10_2.Y + DataCardValue10_2.Height
                 ZIndex: =3
 
-            StarVisible10_1 As label:
+            StarVisible10_2 As label:
                 Align: =Align.Center
-                Height: =DataCardKey10_1.Height
-                PaddingBottom: =DataCardKey10_1.PaddingBottom
-                PaddingLeft: =DataCardKey10_1.PaddingLeft
-                PaddingRight: =DataCardKey10_1.PaddingRight
-                PaddingTop: =DataCardKey10_1.PaddingTop
+                Height: =DataCardKey10_2.Height
+                PaddingBottom: =DataCardKey10_2.PaddingBottom
+                PaddingLeft: =DataCardKey10_2.PaddingLeft
+                PaddingRight: =DataCardKey10_2.PaddingRight
+                PaddingTop: =DataCardKey10_2.PaddingTop
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =DataCardKey10_1.Y
+                Y: =DataCardKey10_2.Y
                 ZIndex: =4
 
-        "'Create Date_DataCard1_1' As typedDataCard.dateEditCard":
+        "'Create Date_DataCard1_2' As typedDataCard.dateEditCard":
             BorderStyle: =BorderStyle.Solid
             DataField: ="CreateDate"
             Default: =ThisItem.CreateDate
@@ -605,13 +605,13 @@ AddContactForm As screen:
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
             Required: =false
-            Update: =DataCardValue11_1.SelectedDate
+            Update: =DataCardValue11_2.SelectedDate
             Width: =370
             X: =2
             Y: =1
             ZIndex: =20
 
-            DataCardKey11_1 As label:
+            DataCardKey11_2 As label:
                 AutoHeight: =true
                 Height: =34
                 PaddingBottom: =0
@@ -625,7 +625,7 @@ AddContactForm As screen:
                 Y: =10
                 ZIndex: =1
 
-            DataCardValue11_1 As datepicker:
+            DataCardValue11_2 As datepicker:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 DefaultDate: =Parent.Default
                 DisplayMode: =Parent.DisplayMode
@@ -637,10 +637,10 @@ AddContactForm As screen:
                 Tooltip: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardKey11_1.Y + DataCardKey11_1.Height + 5
+                Y: =DataCardKey11_2.Y + DataCardKey11_2.Height + 5
                 ZIndex: =2
 
-            ErrorMessage11_1 As label:
+            ErrorMessage11_2 As label:
                 AutoHeight: =true
                 Height: =10
                 Live: =Live.Assertive
@@ -653,38 +653,38 @@ AddContactForm As screen:
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardValue11_1.Y + DataCardValue11_1.Height
+                Y: =DataCardValue11_2.Y + DataCardValue11_2.Height
                 ZIndex: =3
 
-            StarVisible11_1 As label:
+            StarVisible11_2 As label:
                 Align: =Align.Center
-                Height: =DataCardKey11_1.Height
-                PaddingBottom: =DataCardKey11_1.PaddingBottom
-                PaddingLeft: =DataCardKey11_1.PaddingLeft
-                PaddingRight: =DataCardKey11_1.PaddingRight
-                PaddingTop: =DataCardKey11_1.PaddingTop
+                Height: =DataCardKey11_2.Height
+                PaddingBottom: =DataCardKey11_2.PaddingBottom
+                PaddingLeft: =DataCardKey11_2.PaddingLeft
+                PaddingRight: =DataCardKey11_2.PaddingRight
+                PaddingTop: =DataCardKey11_2.PaddingTop
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =DataCardKey11_1.Y
+                Y: =DataCardKey11_2.Y
                 ZIndex: =4
 
-    Button3_2 As button:
-        OnSelect: =SubmitForm(Form1_1);Navigate(ContactScreen,ScreenTransition.Fade);NewForm(Form1_1)
+    Button3_4 As button:
+        OnSelect: =SubmitForm(Form1_2);Navigate(ContactScreen,ScreenTransition.Fade);NewForm(Form1_2)
         Text: ="Save"
         X: =456
         Y: =568
         ZIndex: =20
 
-    Button3_3 As button:
+    Button3_5 As button:
         OnSelect: =Navigate(ContactScreen,ScreenTransition.Cover)
         Text: ="Cancel"
         X: =670
         Y: =568
         ZIndex: =21
 
-    Icon12_1 As icon.BackArrow:
+    Icon12_2 As icon.BackArrow:
         Color: =RGBA(255, 255, 255, 1)
         Height: =30
         Icon: =Icon.BackArrow
