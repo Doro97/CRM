@@ -1,0 +1,117 @@
+CreateDealForm As screen:
+    Fill: =RGBA(237, 242, 246, 1)
+    Height: =Max(App.Height, App.DesignHeight)
+    OnVisible: |-
+        =UpdateContext({ResetSearch:true});
+        UpdateContext({ResetSearch:false});
+        If(IsEmpty(CustomerFeedbackList), ClearCollect(CustomerFeedbackList, CustomerFeedback));
+        If(IsEmpty(CustomerOpportunityList), ClearCollect(CustomerOpportunityList, CustomerOpportunity))
+    Width: =Max(App.Width, App.DesignWidth)
+
+    Rectangle10_5 As rectangle:
+        DisabledFill: =Rectangle10_5.Fill
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =640
+        HoverFill: =Rectangle10_5.Fill
+        PressedFill: =Rectangle10_5.Fill
+        TabIndex: =0
+        Width: =1366
+        Y: =128
+        ZIndex: =2
+
+    Rectangle1_18 As rectangle:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        BorderStyle: =BorderStyle.None
+        DisabledFill: =Rectangle1_18.Fill
+        Fill: =RGBA(9, 33, 98, 1)
+        Height: =133
+        HoverFill: =Rectangle1_18.Fill
+        PressedFill: =Rectangle1_18.Fill
+        TabIndex: =0
+        Width: =1366
+        ZIndex: =3
+
+    Image1_4 As image:
+        ApplyEXIFOrientation: =false
+        Height: =30
+        HoverBorderColor: =ColorFade(Image1_4.BorderColor, 20%)
+        HoverFill: =ColorFade(Image1_4.Fill, 20%)
+        Image: =home
+        OnSelect: =Navigate(HomePageScreen)
+        PressedBorderColor: =ColorFade(Image1_4.BorderColor, -20%)
+        PressedFill: =ColorFade(Image1_4.Fill, -20%)
+        TabIndex: =0
+        Width: =30
+        X: =1317
+        Y: =12
+        ZIndex: =4
+
+    TextBox1_9 As label:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.'Lato Black'
+        Height: =37
+        HoverBorderColor: =TextBox1_9.BorderColor
+        HoverColor: =TextBox1_9.Color
+        HoverFill: =TextBox1_9.Fill
+        PressedBorderColor: =TextBox1_9.BorderColor
+        PressedColor: =TextBox1_9.Color
+        PressedFill: =TextBox1_9.Fill
+        Size: =18
+        Text: |-
+            ="Contact Form
+            "
+        VerticalAlign: =VerticalAlign.Top
+        Width: =182
+        X: =1184
+        Y: =42
+        ZIndex: =7
+
+    TextBox3_22 As label:
+        Align: =TextPosition.Right
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.Lato
+        Height: =21
+        HoverBorderColor: =TextBox3_22.BorderColor
+        HoverColor: =TextBox3_22.Color
+        HoverFill: =TextBox3_22.Fill
+        PressedBorderColor: =TextBox3_22.BorderColor
+        PressedColor: =TextBox3_22.Color
+        PressedFill: =TextBox3_22.Fill
+        Size: =9
+        Text: =User().FullName
+        Width: =256
+        X: =1091.6666666666665
+        Y: =84.99999999999996
+        ZIndex: =18
+
+    Button3_4 As button:
+        OnSelect: =SubmitForm(Form1_2);Navigate(ContactScreen,ScreenTransition.Fade);NewForm(Form1_2)
+        Text: ="Save"
+        X: =456
+        Y: =568
+        ZIndex: =20
+
+    Button3_5 As button:
+        OnSelect: =Navigate(ContactScreen,ScreenTransition.Cover)
+        Text: ="Cancel"
+        X: =670
+        Y: =568
+        ZIndex: =21
+
+    Icon12_2 As icon.BackArrow:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =30
+        Icon: =Icon.BackArrow
+        OnSelect: =Back()
+        Width: =44
+        X: =20
+        Y: =23
+        ZIndex: =22
+
+    Form2 As form:
+        X: =40
+        Y: =40
+        ZIndex: =23
+

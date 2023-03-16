@@ -2069,112 +2069,32 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "AddContactForm_1.Form1_2.'Contact Owner_DataCard1_2'.DisplayName"
+                  "fullyQualifiedName": "CreateDealForm.Button3_4.OnSelect"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "AddContactForm_1.Form1_2.'Contact Owner_DataCard1_2'.DisplayName",
+                  "fullyQualifiedName": "CreateDealForm.Button3_4.OnSelect",
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 14,
-                  "charOffset": 57,
+                  "charLength": 7,
+                  "charOffset": 11,
                   "snippet": {
-                    "text": "\"ContactOwner\""
+                    "text": "Form1_2"
                   }
                 }
               },
               "properties": {
-                "member": "DisplayName",
-                "module": "AddContactForm_1",
-                "type": "AddContactForm_1.Form1_2.'Contact Owner_DataCard1_2'"
+                "member": "OnSelect",
+                "module": "CreateDealForm",
+                "type": "CreateDealForm.Button3_4"
               }
             }
           ],
           "message": {
             "arguments": [
-              "ContactOwner"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrColDNE-Name",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "AddContactForm_1.Form1_2.'Contact Owner_DataCard1_2'.DisplayName"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "AddContactForm_1.Form1_2.'Contact Owner_DataCard1_2'.DisplayName",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 72,
-                  "charOffset": 0,
-                  "snippet": {
-                    "text": "DataSourceInfo([@ContactList],DataSourceInfo.DisplayName,\"ContactOwner\")"
-                  }
-                }
-              },
-              "properties": {
-                "member": "DisplayName",
-                "module": "AddContactForm_1",
-                "type": "AddContactForm_1.Form1_2.'Contact Owner_DataCard1_2'"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "DataSourceInfo"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "AddContactForm_1.Form1_2.'Contact Owner_DataCard1_2'.Default"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "AddContactForm_1.Form1_2.'Contact Owner_DataCard1_2'.Default",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 13,
-                  "charOffset": 8,
-                  "snippet": {
-                    "text": ".ContactOwner"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Default",
-                "module": "AddContactForm_1",
-                "type": "AddContactForm_1.Form1_2.'Contact Owner_DataCard1_2'"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "ContactOwner"
+              "Form1_2"
             ],
             "id": "issue"
           },
@@ -2189,193 +2109,32 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "AddContactForm_1.Form1_2.'Contact Owner_DataCard1_2'.MaxLength"
+                  "fullyQualifiedName": "CreateDealForm.Button3_4.OnSelect"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "AddContactForm_1.Form1_2.'Contact Owner_DataCard1_2'.MaxLength",
+                  "fullyQualifiedName": "CreateDealForm.Button3_4.OnSelect",
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 14,
-                  "charOffset": 57,
+                  "charLength": 7,
+                  "charOffset": 74,
                   "snippet": {
-                    "text": "\"ContactOwner\""
+                    "text": "Form1_2"
                   }
                 }
               },
               "properties": {
-                "member": "MaxLength",
-                "module": "AddContactForm_1",
-                "type": "AddContactForm_1.Form1_2.'Contact Owner_DataCard1_2'"
+                "member": "OnSelect",
+                "module": "CreateDealForm",
+                "type": "CreateDealForm.Button3_4"
               }
             }
           ],
           "message": {
             "arguments": [
-              "ContactOwner"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrColDNE-Name",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "AddContactForm_1.Form1_2.'Contact Owner_DataCard1_2'.MaxLength"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "AddContactForm_1.Form1_2.'Contact Owner_DataCard1_2'.MaxLength",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 72,
-                  "charOffset": 0,
-                  "snippet": {
-                    "text": "DataSourceInfo([@ContactList], DataSourceInfo.MaxLength, \"ContactOwner\")"
-                  }
-                }
-              },
-              "properties": {
-                "member": "MaxLength",
-                "module": "AddContactForm_1",
-                "type": "AddContactForm_1.Form1_2.'Contact Owner_DataCard1_2'"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "DataSourceInfo"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "AddContactForm_1.Form1_2.'Create Date_DataCard1_2'.DisplayName"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "AddContactForm_1.Form1_2.'Create Date_DataCard1_2'.DisplayName",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 12,
-                  "charOffset": 57,
-                  "snippet": {
-                    "text": "\"CreateDate\""
-                  }
-                }
-              },
-              "properties": {
-                "member": "DisplayName",
-                "module": "AddContactForm_1",
-                "type": "AddContactForm_1.Form1_2.'Create Date_DataCard1_2'"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "CreateDate",
-              "Created"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrColumnDoesNotExist-Name-Similar",
-          "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "AddContactForm_1.Form1_2.'Create Date_DataCard1_2'.DisplayName"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "AddContactForm_1.Form1_2.'Create Date_DataCard1_2'.DisplayName",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 70,
-                  "charOffset": 0,
-                  "snippet": {
-                    "text": "DataSourceInfo([@ContactList],DataSourceInfo.DisplayName,\"CreateDate\")"
-                  }
-                }
-              },
-              "properties": {
-                "member": "DisplayName",
-                "module": "AddContactForm_1",
-                "type": "AddContactForm_1.Form1_2.'Create Date_DataCard1_2'"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "DataSourceInfo"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "AddContactForm_1.Form1_2.'Create Date_DataCard1_2'.Default"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "AddContactForm_1.Form1_2.'Create Date_DataCard1_2'.Default",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 11,
-                  "charOffset": 8,
-                  "snippet": {
-                    "text": ".CreateDate"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Default",
-                "module": "AddContactForm_1",
-                "type": "AddContactForm_1.Form1_2.'Create Date_DataCard1_2'"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "CreateDate"
+              "Form1_2"
             ],
             "id": "issue"
           },
@@ -4010,19 +3769,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "AddContactForm_1.Image1_4.AccessibleLabel"
+                  "fullyQualifiedName": "CreateDealForm.Image1_4.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "AddContactForm_1.Image1_4.AccessibleLabel",
+                  "fullyQualifiedName": "CreateDealForm.Image1_4.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "AddContactForm_1",
-                "type": "AddContactForm_1.Image1_4"
+                "module": "CreateDealForm",
+                "type": "CreateDealForm.Image1_4"
               }
             }
           ],
@@ -4040,19 +3799,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "AddContactForm_1.Rectangle1_18.AccessibleLabel"
+                  "fullyQualifiedName": "CreateDealForm.Rectangle1_18.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "AddContactForm_1.Rectangle1_18.AccessibleLabel",
+                  "fullyQualifiedName": "CreateDealForm.Rectangle1_18.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "AddContactForm_1",
-                "type": "AddContactForm_1.Rectangle1_18"
+                "module": "CreateDealForm",
+                "type": "CreateDealForm.Rectangle1_18"
               }
             }
           ],
@@ -7220,19 +6979,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "AddContactForm_1.Icon12_2.AccessibleLabel"
+                  "fullyQualifiedName": "CreateDealForm.Icon12_2.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "AddContactForm_1.Icon12_2.AccessibleLabel",
+                  "fullyQualifiedName": "CreateDealForm.Icon12_2.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "AddContactForm_1",
-                "type": "AddContactForm_1.Icon12_2"
+                "module": "CreateDealForm",
+                "type": "CreateDealForm.Icon12_2"
               }
             }
           ],
@@ -7250,19 +7009,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "AddContactForm_1.Icon12_2.TabIndex"
+                  "fullyQualifiedName": "CreateDealForm.Icon12_2.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "AddContactForm_1.Icon12_2.TabIndex",
+                  "fullyQualifiedName": "CreateDealForm.Icon12_2.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "AddContactForm_1",
-                "type": "AddContactForm_1.Icon12_2"
+                "module": "CreateDealForm",
+                "type": "CreateDealForm.Icon12_2"
               }
             }
           ],
@@ -7280,229 +7039,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "AddContactForm_1.Rectangle10_5.AccessibleLabel"
+                  "fullyQualifiedName": "CreateDealForm.Rectangle10_5.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "AddContactForm_1.Rectangle10_5.AccessibleLabel",
+                  "fullyQualifiedName": "CreateDealForm.Rectangle10_5.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "AddContactForm_1",
-                "type": "AddContactForm_1.Rectangle10_5"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "AddContactForm_1.Form1_2.Title_DataCard2_2.DataCardValue6_2.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "AddContactForm_1.Form1_2.Title_DataCard2_2.DataCardValue6_2.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "AddContactForm_1",
-                "type": "AddContactForm_1.Form1_2.Title_DataCard2_2.DataCardValue6_2"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "AddContactForm_1.Form1_2.Name_DataCard1_2.DataCardValue7_2.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "AddContactForm_1.Form1_2.Name_DataCard1_2.DataCardValue7_2.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "AddContactForm_1",
-                "type": "AddContactForm_1.Form1_2.Name_DataCard1_2.DataCardValue7_2"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "AddContactForm_1.Form1_2.Email_DataCard1_2.DataCardValue8_2.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "AddContactForm_1.Form1_2.Email_DataCard1_2.DataCardValue8_2.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "AddContactForm_1",
-                "type": "AddContactForm_1.Form1_2.Email_DataCard1_2.DataCardValue8_2"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "AddContactForm_1.Form1_2.Company_DataCard1_2.DataCardValue9_2.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "AddContactForm_1.Form1_2.Company_DataCard1_2.DataCardValue9_2.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "AddContactForm_1",
-                "type": "AddContactForm_1.Form1_2.Company_DataCard1_2.DataCardValue9_2"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "AddContactForm_1.Form1_2.'Contact Owner_DataCard1_2'.DataCardValue10_2.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "AddContactForm_1.Form1_2.'Contact Owner_DataCard1_2'.DataCardValue10_2.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "AddContactForm_1",
-                "type": "AddContactForm_1.Form1_2.'Contact Owner_DataCard1_2'.DataCardValue10_2"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "AddContactForm_1.Form1_2.'Create Date_DataCard1_2'.DataCardValue11_2.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "AddContactForm_1.Form1_2.'Create Date_DataCard1_2'.DataCardValue11_2.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "AddContactForm_1",
-                "type": "AddContactForm_1.Form1_2.'Create Date_DataCard1_2'.DataCardValue11_2"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "AddContactForm_1.Form1_2.'Modified By_DataCard1_2'.DataCardValue14_2.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "AddContactForm_1.Form1_2.'Modified By_DataCard1_2'.DataCardValue14_2.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "AddContactForm_1",
-                "type": "AddContactForm_1.Form1_2.'Modified By_DataCard1_2'.DataCardValue14_2"
+                "module": "CreateDealForm",
+                "type": "CreateDealForm.Rectangle10_5"
               }
             }
           ],
@@ -7850,19 +7399,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "AddContactForm_1.ResetSearch"
+                  "fullyQualifiedName": "CreateDealForm.ResetSearch"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "AddContactForm_1.ResetSearch",
+                  "fullyQualifiedName": "CreateDealForm.ResetSearch",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "ResetSearch",
-                "module": "AddContactForm_1",
-                "type": "AddContactForm_1"
+                "module": "CreateDealForm",
+                "type": "CreateDealForm"
               }
             }
           ],
