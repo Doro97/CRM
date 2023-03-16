@@ -104,6 +104,9 @@
           "ContactList": {
             "tableName": "53e34c06-7df9-4b45-a931-34ce80e57a15"
           },
+          "Deals": {
+            "tableName": "3b5ca8ab-a46d-4362-98e4-a2be2bea3ccd"
+          },
           "DEALSTAGES": {
             "tableName": "26444179-9578-41d7-a9cb-6e5a97651ea7"
           }
@@ -136,7 +139,8 @@
       "DummyLoanData_1",
       "DummyLoanData_2",
       "ContactList",
-      "DEALSTAGES"
+      "DEALSTAGES",
+      "Deals"
     ],
     "dependencies": {},
     "dependents": [
