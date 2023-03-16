@@ -1,4 +1,4 @@
-"CustomerOverviewScreen As screen.'PhoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
+"DealsScreen As screen.'PhoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
     Fill: =RGBA(237,242,246,1)
     Height: =Max(App.Height, App.DesignHeight)
     OnVisible: =
@@ -34,8 +34,8 @@
         HoverFill: =Rectangle1_3.Fill
         PressedFill: =Rectangle1_3.Fill
         TabIndex: =0
-        Width: =950
-        X: =407.66666666666685
+        Width: =1349
+        X: =8
         Y: =67.27500406901038
         ZIndex: =10
 
@@ -270,24 +270,6 @@
             Y: =18.769119769119783
             ZIndex: =9
 
-    TextBox4_17 As label:
-        BorderColor: =RGBA(0, 0, 0, 1)
-        Color: =RGBA(0,25,83,.8)
-        Font: =Font.'Lato Black'
-        Height: =24
-        HoverBorderColor: =TextBox4_17.BorderColor
-        HoverColor: =TextBox4_17.Color
-        HoverFill: =TextBox4_17.Fill
-        PressedBorderColor: =TextBox4_17.BorderColor
-        PressedColor: =TextBox4_17.Color
-        PressedFill: =TextBox4_17.Fill
-        Size: =10
-        Text: ="AVALABILITY SCHEDULE"
-        Width: =298.8888888888889
-        X: =427.1111111111111
-        Y: =84
-        ZIndex: =16
-
     Button1 As button:
         BorderColor: =ColorFade(Button1.Fill, -15%)
         BorderThickness: =0
@@ -341,7 +323,7 @@
         PressedColor: =TextBox4_15.Color
         PressedFill: =TextBox4_15.Fill
         Size: =10
-        Text: ="CLIENT PORTFOLIO"
+        Text: ="Deals"
         Width: =360.6756756756757
         X: =18.166666666666675
         Y: =82
@@ -362,24 +344,6 @@
         X: =183.1666666666666
         Y: =88.7777777777778
         ZIndex: =29
-
-    TextBox4_29 As label:
-        BorderColor: =RGBA(0, 0, 0, 1)
-        Color: =RGBA(0,25,83,.8)
-        Font: =Font.'Lato Black'
-        Height: =24
-        HoverBorderColor: =TextBox4_29.BorderColor
-        HoverColor: =TextBox4_29.Color
-        HoverFill: =TextBox4_29.Fill
-        PressedBorderColor: =TextBox4_29.BorderColor
-        PressedColor: =TextBox4_29.Color
-        PressedFill: =TextBox4_29.Fill
-        Size: =10
-        Text: ="PORTFOLIO SUMMARY"
-        Width: =360
-        X: =18
-        Y: =320.9999999999999
-        ZIndex: =32
 
     TextBox4_31 As label:
         Align: =LayoutAlignItems.Center
@@ -402,156 +366,6 @@
         Y: =272.1666666666666
         ZIndex: =34
 
-    TextBox4_77 As label:
-        BorderColor: =RGBA(0, 0, 0, 1)
-        Color: =RGBA(128, 128, 128, 1)
-        Font: =Font.Lato
-        Height: =27
-        HoverBorderColor: =TextBox4_77.BorderColor
-        HoverColor: =TextBox4_77.Color
-        HoverFill: =TextBox4_77.Fill
-        PressedBorderColor: =TextBox4_77.BorderColor
-        PressedColor: =TextBox4_77.Color
-        PressedFill: =TextBox4_77.Fill
-        Size: =9
-        Text: ="NUMBER OF LOANS"
-        Width: =209
-        X: =18.42857142857143
-        Y: =350.49999999999994
-        ZIndex: =37
-
-    TextBox4_78 As label:
-        BorderColor: =RGBA(0, 0, 0, 1)
-        Color: =RGBA(0, 0, 0, 0.70196078)
-        Font: =Font.'Lato Light'
-        FontWeight: =FontWeight.Semibold
-        Height: =27.500000000000057
-        HoverBorderColor: =TextBox4_78.BorderColor
-        HoverColor: =TextBox4_78.Color
-        HoverFill: =TextBox4_78.Fill
-        PressedBorderColor: =TextBox4_78.BorderColor
-        PressedColor: =TextBox4_78.Color
-        PressedFill: =TextBox4_78.Fill
-        Size: =9
-        Text: =GalleryCustomer.Selected.NumberofLoans
-        VerticalAlign: =VerticalAlign.Top
-        Width: =213
-        X: =18.42857142857143
-        Y: =368.457627118644
-        ZIndex: =38
-
-    TextBox4_79 As label:
-        BorderColor: =RGBA(0, 0, 0, 1)
-        Color: =RGBA(128, 128, 128, 1)
-        Font: =Font.Lato
-        Height: =27
-        HoverBorderColor: =TextBox4_79.BorderColor
-        HoverColor: =TextBox4_79.Color
-        HoverFill: =TextBox4_79.Fill
-        PressedBorderColor: =TextBox4_79.BorderColor
-        PressedColor: =TextBox4_79.Color
-        PressedFill: =TextBox4_79.Fill
-        Size: =9
-        Text: ="TOTAL PORTFOLIO VALUE"
-        Width: =210
-        X: =18.42857142857143
-        Y: =396.44915254237264
-        ZIndex: =39
-
-    TextBox4_80 As label:
-        BorderColor: =RGBA(0, 0, 0, 1)
-        Color: =RGBA(0, 0, 0, 0.70196078)
-        Font: =Font.'Lato Light'
-        FontWeight: =FontWeight.Semibold
-        Height: =28
-        HoverBorderColor: =TextBox4_80.BorderColor
-        HoverColor: =TextBox4_80.Color
-        HoverFill: =TextBox4_80.Fill
-        PressedBorderColor: =TextBox4_80.BorderColor
-        PressedColor: =TextBox4_80.Color
-        PressedFill: =TextBox4_80.Fill
-        Size: =9
-        Text: =GalleryCustomer.Selected.PortfolioValue
-        VerticalAlign: =VerticalAlign.Top
-        Width: =210
-        X: =18.42857142857143
-        Y: =413.48305084745726
-        ZIndex: =40
-
-    TextBox4_81 As label:
-        BorderColor: =RGBA(0, 0, 0, 1)
-        Color: =RGBA(128, 128, 128, 1)
-        Font: =Font.Lato
-        Height: =28
-        HoverBorderColor: =TextBox4_81.BorderColor
-        HoverColor: =TextBox4_81.Color
-        HoverFill: =TextBox4_81.Fill
-        PressedBorderColor: =TextBox4_81.BorderColor
-        PressedColor: =TextBox4_81.Color
-        PressedFill: =TextBox4_81.Fill
-        Size: =9
-        Text: ="ACTUAL COLLECTIONS TO DATE"
-        Width: =214
-        X: =18.42857142857143
-        Y: =442.89830508474523
-        ZIndex: =41
-
-    TextBox4_83 As label:
-        BorderColor: =RGBA(0, 0, 0, 1)
-        Color: =RGBA(128, 128, 128, 1)
-        Font: =Font.Lato
-        Height: =27
-        HoverBorderColor: =TextBox4_83.BorderColor
-        HoverColor: =TextBox4_83.Color
-        HoverFill: =TextBox4_83.Fill
-        PressedBorderColor: =TextBox4_83.BorderColor
-        PressedColor: =TextBox4_83.Color
-        PressedFill: =TextBox4_83.Fill
-        Size: =9
-        Text: ="EXPECTED MONTHLY COLLECTIONS"
-        Width: =132
-        X: =245
-        Y: =395
-        ZIndex: =43
-
-    TextBox4_84 As label:
-        BorderColor: =RGBA(0, 0, 0, 1)
-        Color: =RGBA(0, 0, 0, 0.70196078)
-        Font: =Font.'Lato Light'
-        FontWeight: =FontWeight.Semibold
-        Height: =28
-        HoverBorderColor: =TextBox4_84.BorderColor
-        HoverColor: =TextBox4_84.Color
-        HoverFill: =TextBox4_84.Fill
-        PressedBorderColor: =TextBox4_84.BorderColor
-        PressedColor: =TextBox4_84.Color
-        PressedFill: =TextBox4_84.Fill
-        Size: =9
-        Text: =
-        VerticalAlign: =VerticalAlign.Top
-        Width: =132
-        X: =245
-        Y: =411.8620689655172
-        ZIndex: =44
-
-    TextBox4_85 As label:
-        BorderColor: =RGBA(0, 0, 0, 1)
-        Color: =RGBA(128, 128, 128, 1)
-        Font: =Font.Lato
-        Height: =30.857142857142833
-        HoverBorderColor: =TextBox4_85.BorderColor
-        HoverColor: =TextBox4_85.Color
-        HoverFill: =TextBox4_85.Fill
-        PressedBorderColor: =TextBox4_85.BorderColor
-        PressedColor: =TextBox4_85.Color
-        PressedFill: =TextBox4_85.Fill
-        Size: =9
-        Text: ="AVERAGE INTEREST RATE"
-        Width: =145
-        X: =245.1666666666666
-        Y: =346.49999999999994
-        ZIndex: =45
-
     TextBox4_86 As label:
         BorderColor: =RGBA(0, 0, 0, 1)
         Color: =RGBA(0, 0, 0, 0.70196078)
@@ -572,52 +386,12 @@
         Y: =365.76271186440664
         ZIndex: =46
 
-    TextBoxNoCustomerHealth As label:
-        Align: =LayoutAlignItems.Center
-        BorderColor: =RGBA(0, 0, 0, 1)
-        Color: =RGBA(153, 153, 153, 1)
-        Font: =Font.Lato
-        Height: =35
-        HoverBorderColor: =TextBoxNoCustomerHealth.BorderColor
-        HoverColor: =TextBoxNoCustomerHealth.Color
-        HoverFill: =TextBoxNoCustomerHealth.Fill
-        PressedBorderColor: =TextBoxNoCustomerHealth.BorderColor
-        PressedColor: =TextBoxNoCustomerHealth.Color
-        PressedFill: =TextBoxNoCustomerHealth.Fill
-        Text: ="Client portfolio unavailable"
-        VerticalAlign: =VerticalAlign.Top
-        Visible: =Len(Text(First(CustomerCSATCollect).Value)) = 0 && Len(Text(First(CustomerUsageCollect).Value)) = 0
-        Width: =380
-        Y: =175
-        ZIndex: =48
-
-    TextBoxNoWorkOrder As label:
-        Align: =LayoutAlignItems.Center
-        BorderColor: =RGBA(0, 0, 0, 1)
-        Color: =RGBA(153, 153, 153, 1)
-        Font: =Font.Lato
-        Height: =34
-        HoverBorderColor: =TextBoxNoWorkOrder.BorderColor
-        HoverColor: =TextBoxNoWorkOrder.Color
-        HoverFill: =TextBoxNoWorkOrder.Fill
-        PressedBorderColor: =TextBoxNoWorkOrder.BorderColor
-        PressedColor: =TextBoxNoWorkOrder.Color
-        PressedFill: =TextBoxNoWorkOrder.Fill
-        Text: ="Availability not calculated"
-        VerticalAlign: =VerticalAlign.Top
-        Visible: =CountRows(GalleryWorkOrder.AllItems) = 0
-        Width: =327
-        X: =410
-        Y: =365.5
-        ZIndex: =49
-
     HtmlText2 As htmlViewer:
         Color: =RGBA(255, 255, 255, 1)
         Font: =Font.'Lato Black'
         Height: =29
         HoverBorderColor: =HtmlText2.BorderColor
-        HtmlText: |-
-            =GalleryCustomer.Selected.ClientName & "&nbsp;&nbsp;|&nbsp;&nbsp;<span style=font-size:15px>Overview</span>"
+        HtmlText: =""
         PaddingBottom: =0
         PaddingLeft: =0
         PaddingRight: =0
@@ -670,15 +444,6 @@
         Y: =463
         ZIndex: =75
 
-    PowerBI2 As powerbi:
-        Height: =537
-        TileUrl: |-
-            ="https://app.powerbi.com/reportEmbed?reportId=dcba153b-8c59-4ca2-a549-d75c4d6559cc&autoAuth=true&ctid=14bb12e7-b0df-49e4-8f71-a2051773acea"
-        Width: =907
-        X: =427
-        Y: =132
-        ZIndex: =76
-
     Button1_2 As button:
         BorderColor: =ColorFade(Button1_2.Fill, -15%)
         BorderThickness: =0
@@ -730,4 +495,44 @@
         X: =370
         Y: =712
         ZIndex: =78
+
+    "Gallery1 As gallery.'BrowseLayout_Horizontal_TwoTextOneImageVariant_ver4.0'":
+        DelayItemLoading: =true
+        Height: =327
+        Items: =DEALSTAGES
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplatePadding: =0
+        TemplateSize: =Min(440, Self.Height - 60)
+        Width: =1317
+        X: =30
+        Y: =290
+        ZIndex: =79
+
+        Title2 As label:
+            Height: =114
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.Title
+            VerticalAlign: =VerticalAlign.Top
+            Width: =205
+            X: =32
+            Y: =
+            ZIndex: =2
+
+    Icon8 As icon.Add:
+        Height: =26
+        Icon: =Icon.Add
+        Width: =19
+        X: =41
+        Y: =127
+        ZIndex: =80
+
+    Label5 As label:
+        Text: ="Add Pipeline Stage"
+        X: =68
+        Y: =120
+        ZIndex: =81
 

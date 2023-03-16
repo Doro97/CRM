@@ -60,7 +60,7 @@ OpportunityMessageScreen As screen:
         HoverBorderColor: =ColorFade(Button1_5.BorderColor, 20%)
         HoverColor: =Button1_5.Color
         HoverFill: =ColorFade(Button1_5.Fill, 20%)
-        OnSelect: =Navigate(CustomerOverviewScreen, ScreenTransition.Fade)
+        OnSelect: =Navigate(DealsScreen, ScreenTransition.Fade)
         PressedBorderColor: =Button1_5.Fill
         PressedColor: =Button1_5.Fill
         PressedFill: =Button1_5.Color

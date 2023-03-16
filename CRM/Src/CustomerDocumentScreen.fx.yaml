@@ -172,7 +172,7 @@ CustomerDocumentScreen As screen:
             Fill: =RGBA(230, 230, 230, 1)
             Height: =1
             HoverFill: =Rectangle4_2.Fill
-            OnSelect: =Navigate(CustomerOverviewScreen, ScreenTransition.Fade)
+            OnSelect: =Navigate(DealsScreen, ScreenTransition.Fade)
             PressedFill: =Rectangle4_2.Fill
             TabIndex: =0
             Width: =1366
